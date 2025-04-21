@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMOREA</title>
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- nice-select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="mobile-menu" id="mobileMenu">
+
+            <div class="menu-links">
+                <a href="#">Главная</a>
+                <a href="#">О компании</a>
+                <a href="#">Каталог</a>
+                <a href="#">Акции</a>
+                <a href="#">Услуги</a>
+            </div>
+
+            <div class="menu-footer">
+                <a href="#" class="phone">8 (964) 438-44-82</a>
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="assets/imges/header_WhatsApp.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/imges/header_Instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/imges/header_teligram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/imges/header_Viber.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                document.getElementById("mobileMenu").classList.toggle("open");
+                if(document.querySelector('.mobile-menu').classList.contains('open')){
+                    document.querySelector('.hamburger').classList.add('active')
+                    document.querySelector('.wrapper').style.height='100vh'
+                }else{
+                    document.querySelector('.hamburger').classList.remove('active')
+                    document.querySelector('.wrapper').style.height='auto'
+                }
+            }
+        </script>
+        <section class="hero">
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <nav class="header_nav">
+                            <div class="smail_logo">
+                                <img src="assets/imges/AMOREA_smail_logo.svg" alt="">
+                            </div>
+                            <ul>
+                                <li><a href="about.html">Главная</a></li>
+                                <li><a href="catalog.htm">O компании</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Услуги</a></li>
+                            </ul>
+                            <div class="nav_logo"><img src="assets/imges/AMOREA_logo.svg" alt=""></div>
+                        </nav>
+                        <div class="header_right">
+                            <div class="header_right--location">
+
+                                <div class="item">
+                                    <img src="assets/imges/header_language.svg" alt="">
+                                    <select>
+                                        <option>Русский</option>
+                                        <option>English</option>
+                                    </select>
+                                </div>
+                                <div class="item">
+                                    <img src="assets/imges/header_mone_img.svg" alt="">
+                                    <select>
+                                        <option>RUB</option>
+                                        <option>USD</option>
+                                        <option>IDR</option>
+                                    </select>
+                                </div>
+                                <div  class="hamburger" onclick="toggleMenu()" onclick="toggleMenu()">
+                                    <span class="top"></span>
+                                    <span class="center"></span>
+                                    <span class="bottom"></span>
+                                </div>
+                            </div>
+                            <ul class="header_right--contacts">
+                                <li><a href="tel:89644384482">8 (964) 438-44-82</a></li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M4.99725 17.6908L1.52912 18.6005L2.45482 15.2191L2.23695 14.8724C1.31968 13.4135 0.835228 11.7273 0.835938 9.99587C0.837943 4.94363 4.94863 0.833313 10.0031 0.833313C12.4506 0.834162 14.7513 1.7885 16.4814 3.52056C18.2114 5.25262 19.1636 7.55482 19.1627 10.0033C19.1606 15.0559 15.05 19.1666 9.99947 19.1666H9.99576C8.35147 19.166 6.73875 18.7243 5.33186 17.8894L4.99725 17.6908Z"
+                                                stroke="white" />
+                                            <path
+                                                d="M15.5546 12.626C15.4857 12.5111 15.3021 12.4421 15.0267 12.3042C14.7512 12.1663 13.3968 11.5 13.1443 11.408C12.8918 11.3161 12.7081 11.2702 12.5245 11.5458C12.3409 11.8216 11.813 12.4421 11.6523 12.626C11.4916 12.8098 11.3309 12.8328 11.0555 12.6949C10.78 12.557 9.89242 12.2662 8.84021 11.3276C8.02129 10.5972 7.46843 9.69513 7.30775 9.41934C7.14706 9.14355 7.29061 8.99452 7.42852 8.85716C7.55245 8.73369 7.70401 8.53533 7.84174 8.37453C7.97946 8.21372 8.02537 8.09874 8.1172 7.91502C8.20901 7.73109 8.16312 7.57028 8.09423 7.43239C8.02537 7.29449 7.47446 5.93857 7.24491 5.38699C7.02129 4.84984 6.79419 4.9226 6.62511 4.91412C6.46462 4.90606 6.28077 4.90436 6.09715 4.90436C5.91352 4.90436 5.61506 4.97331 5.36256 5.24909C5.11007 5.52488 4.39844 6.19134 4.39844 7.54716C4.39844 8.90309 5.38551 10.213 5.52325 10.3968C5.66098 10.5807 7.4657 13.3631 10.2291 14.5563C10.8863 14.8401 11.3994 15.0096 11.7995 15.1366C12.4594 15.3463 13.06 15.3167 13.5345 15.2457C14.0638 15.1667 15.1643 14.5794 15.394 13.9359C15.6234 13.2924 15.6234 12.7408 15.5546 12.626Z"
+                                                stroke="white" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M8.99675 0.836048C9.2945 0.835582 9.62674 0.836048 9.99998 0.836048C12.9859 0.836048 13.3398 0.846765 14.519 0.900352C15.6093 0.95021 16.2011 1.1324 16.5953 1.28548C17.1172 1.48817 17.4893 1.73048 17.8805 2.12189C18.2719 2.5133 18.5142 2.88608 18.7173 3.40797C18.8704 3.80171 19.0528 4.39349 19.1025 5.48386C19.156 6.66276 19.1677 7.0169 19.1677 10.0014C19.1677 12.986 19.156 13.3401 19.1025 14.519C19.0526 15.6094 18.8704 16.2012 18.7173 16.5949C18.5146 17.1168 18.2719 17.4884 17.8805 17.8796C17.489 18.271 17.1174 18.5133 16.5953 18.716C16.2016 18.8698 15.6093 19.0515 14.519 19.1014C13.34 19.1549 12.9859 19.1666 9.99998 19.1666C7.01381 19.1666 6.65991 19.1549 5.48101 19.1014C4.39064 19.051 3.79886 18.8688 3.40442 18.7158C2.88253 18.5131 2.50975 18.2708 2.11834 17.8793C1.72693 17.4879 1.48462 17.1161 1.28146 16.594C1.12839 16.2002 0.945961 15.6084 0.896335 14.5181C0.842749 13.3392 0.832031 12.985 0.832031 9.99864C0.832031 7.01224 0.842749 6.65997 0.896335 5.48106C0.946194 4.3907 1.12839 3.79891 1.28146 3.4047C1.48416 2.88282 1.72693 2.51004 2.11834 2.11863C2.50975 1.72721 2.88253 1.48491 3.40442 1.28175C3.79863 1.12798 4.39064 0.94625 5.48101 0.896158C6.51266 0.849561 6.91247 0.835582 8.99675 0.833252V0.836048Z"
+                                                stroke="white" />
+                                            <path
+                                                d="M15.9689 2.69322C15.2281 2.69322 14.627 3.29362 14.627 4.03474C14.627 4.77563 15.2281 5.37673 15.9689 5.37673C16.7098 5.37673 17.3109 4.77563 17.3109 4.03474C17.3109 3.29385 16.7098 2.69275 15.9689 2.69275V2.69322Z"
+                                                stroke="white" />
+                                            <path
+                                                d="M10.0009 4.26141C6.82926 4.26141 4.25781 6.83287 4.25781 10.0045C4.25781 13.1761 6.82926 15.7464 10.0009 15.7464C13.1725 15.7464 15.743 13.1761 15.743 10.0045C15.743 6.83287 13.1723 4.26141 10.0007 4.26141H10.0009Z"
+                                                stroke="white" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
+                                            viewBox="0 0 20 16" fill="none">
+                                            <path
+                                                d="M8.01641 10.4595L7.72956 14.757C8.15104 14.757 8.33726 14.5642 8.57252 14.3355L10.5975 12.3664L14.8104 15.479C15.5857 15.9068 16.1453 15.6853 16.3384 14.7592L19.104 1.72661C19.3872 0.591392 18.6713 0.0765131 17.9296 0.413247L1.68999 6.67517C0.581481 7.11979 0.587943 7.73822 1.48793 8.01379L5.65538 9.31451L15.3035 3.22765C15.7589 2.95145 16.177 3.09994 15.8339 3.40444L8.01617 10.4593L8.01641 10.4595Z"
+                                                fill="white" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M17.0979 2.05442C16.6175 1.60174 14.6762 0.162508 10.3521 0.142955C10.3521 0.142955 5.25295 -0.17108 2.76718 2.15752C1.38345 3.57097 0.896679 5.63916 0.845333 8.20329C0.793987 10.7674 0.727556 15.5727 5.26311 16.8757H5.26746L5.26456 18.8639C5.26456 18.8639 5.23555 19.6688 5.75452 19.833C6.38227 20.032 6.75069 19.4203 7.35001 18.7608C7.67897 18.3988 8.13325 17.867 8.47556 17.4605C11.5775 17.7271 13.9632 17.1177 14.2341 17.0277C14.8604 16.8203 18.4045 16.3564 18.9809 11.5516C19.5758 6.59904 18.6931 3.46639 17.0979 2.05442ZM17.6235 11.1964C17.1371 15.2083 14.2626 15.4605 13.7326 15.6341C13.5072 15.7081 11.4118 16.2405 8.77696 16.0648C8.77696 16.0648 6.81364 18.4838 6.20039 19.1127C6.10466 19.2111 5.9921 19.2508 5.91697 19.2313C5.81138 19.2049 5.78237 19.0772 5.78353 18.8906C5.78527 18.6239 5.80035 15.5867 5.80035 15.5867C5.79803 15.5867 5.80035 15.5867 5.80035 15.5867C1.96363 14.4988 2.18729 10.4089 2.2308 8.26728C2.27431 6.12562 2.66826 4.37117 3.83848 3.19117C5.94105 1.24623 10.2724 1.53686 10.2724 1.53686C13.9301 1.55315 15.6828 2.67805 16.0892 3.05489C17.4387 4.23489 18.1263 7.05854 17.6235 11.1952V11.1964Z"
+                                                fill="white" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.4261 6.53459C10.4332 6.39685 10.5482 6.29101 10.6831 6.2982C11.1877 6.32508 11.6075 6.48108 11.9065 6.79682C12.2044 7.11134 12.3504 7.55074 12.3761 8.07845C12.3827 8.21621 12.2788 8.33343 12.1439 8.34027C12.009 8.3471 11.8943 8.24096 11.8876 8.1032C11.8656 7.65147 11.7443 7.34395 11.555 7.14407C11.3668 6.9454 11.0797 6.8195 10.6576 6.79701C10.5227 6.78983 10.4191 6.67234 10.4261 6.53459Z"
+                                                fill="white" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.0554 5.18905C10.0652 5.05149 10.1824 4.94813 10.3171 4.9582C11.344 5.03495 12.1706 5.39331 12.7727 6.06452L12.7728 6.06462C13.3684 6.72922 13.6514 7.556 13.6309 8.52575C13.6279 8.66365 13.5161 8.77302 13.3811 8.77004C13.2461 8.76705 13.139 8.65284 13.1419 8.51494C13.16 7.65974 12.9138 6.96176 12.412 6.40183C11.9118 5.84422 11.2125 5.52595 10.2814 5.45636C10.1467 5.44629 10.0455 5.32661 10.0554 5.18905Z"
+                                                fill="white" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.62501 3.90993C9.62595 3.77201 9.73619 3.66097 9.87125 3.66193C11.2904 3.67203 12.49 4.15453 13.4532 5.11341C14.4243 6.0803 14.9046 7.39664 14.9168 9.03151C14.9178 9.16944 14.8092 9.2821 14.6741 9.28315C14.5391 9.2842 14.4288 9.17324 14.4277 9.03531C14.4163 7.50336 13.9701 6.32558 13.1117 5.47108C12.2454 4.60855 11.1697 4.17067 9.86784 4.16141C9.73279 4.16045 9.62407 4.04786 9.62501 3.90993Z"
+                                                fill="white" />
+                                            <path
+                                                d="M10.72 11.4358C10.72 11.4358 11.0638 11.4654 11.2489 11.2326L11.6097 10.7689C11.7838 10.539 12.2038 10.3924 12.6152 10.6264C12.9234 10.806 13.2227 11.0011 13.5118 11.2112C13.7848 11.4162 14.3438 11.8926 14.3456 11.8926C14.6119 12.1222 14.6734 12.4594 14.4921 12.8149C14.4921 12.817 14.4906 12.8205 14.4906 12.8223C14.2909 13.1758 14.0374 13.4946 13.7396 13.7668C13.7361 13.7685 13.7361 13.7703 13.7329 13.7721C13.4741 13.9929 13.2199 14.1184 12.9702 14.1487C12.9335 14.1552 12.8961 14.1576 12.8589 14.1558C12.7488 14.1568 12.6392 14.1396 12.5345 14.1048L12.5264 14.0927C12.1418 13.9819 11.4995 13.7046 10.4299 13.102C9.811 12.7574 9.22175 12.3598 8.66851 11.9137C8.39121 11.6902 8.1267 11.4506 7.87628 11.1961L7.84959 11.1689L7.8229 11.1416L7.79621 11.1144C7.78722 11.1055 7.77852 11.0963 7.76952 11.0871C7.52036 10.8314 7.28578 10.5612 7.06693 10.278C6.63011 9.71307 6.24087 9.1114 5.90338 8.47943C5.31334 7.38682 5.04181 6.7315 4.93332 6.33806L4.92142 6.32977C4.88742 6.22284 4.87066 6.11097 4.87182 5.99855C4.86979 5.96049 4.87203 5.92232 4.87849 5.88479C4.90963 5.6302 5.03272 5.37038 5.24777 5.10533C5.24952 5.10207 5.25126 5.10207 5.253 5.09851C5.51939 4.79435 5.83158 4.53552 6.1778 4.33179C6.17954 4.33179 6.18302 4.33002 6.18505 4.33002C6.53316 4.14485 6.86328 4.20766 7.08781 4.47815C7.08955 4.47992 7.55515 5.05082 7.75502 5.3296C7.96076 5.62519 8.15188 5.93111 8.32766 6.24622C8.55683 6.66602 8.41323 7.0959 8.18812 7.27306L7.73413 7.64161C7.50496 7.83062 7.53513 8.18169 7.53513 8.18169C7.53513 8.18169 8.20756 10.7808 10.72 11.4358Z"
+                                                fill="white" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hedt_row">
+                    <div class="hero_title">Роскошные апартаменты и виллы</div>
+                    <div class="hero_text">
+                        <p>Откройте для себя эксклюзивные апартаменты и виллы на</p>
+                        <p>Бали с лучшими условиями!</p>
+                    </div>
+                    <div class="hero_button"><a href="#">Заказать звонок</a></div>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <div class="container">
+                <div class="start">
+                    <form id="bookingForm">
+                        <select name="tourType1" id="tourChoosing1">
+                            <option value="" selected disabled data-placeholder="true">Выбрать тур</option>
+                            <option value="1">Название тура 1</option>
+                            <option value="2">Название тура 2</option>
+                            <option value="3">Название тура 3</option>
+                            <option value="4">Название тура 4</option>
+                            <option value="5">Название тура 5</option>
+                            <option value="6">Название тура 6</option>
+                        </select>
+
+                        <select name="tourType2" id="tourChoosing2" data-bs-target="#kt_modal_1">
+                            <option value="" selected disabled data-placeholder="true">Выбрать тур</option>
+                            <option value="1">Название тура 1</option>
+                            <option value="2">Название тура 2</option>
+                            <option value="3">Название тура 3</option>
+                            <option value="4">Название тура 4</option>
+                            <option value="5">Название тура 5</option>
+                            <option value="6">Название тура 6</option>
+                        </select>
+
+                        <div class="date-picker-container">
+                            <input type="text" class="datePicker" id="kt_datepicker_1" placeholder="Выбрать дату">
+                            <img src="assets/imges/form_imput_img.svg" alt="">
+                        </div>
+
+                        <div class="date-picker-container">
+                            <input type="text" class="form-control" placeholder="Pick a date" id="kt_datepicker_2" />
+                            <img src="assets/imges/form_imput_img.svg" alt="">
+                        </div>
+                        <button class="button-form">Продолжить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="discounted">
+            <div class="container">
+                <div class="discounted__blog">
+                    <div class="discounted__blog--title">Горящие предложения <a href="#">Просмотреть все</a></div>
+                    <div class="swiper discounted__blog--item">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__img">
+                                        <div class="item__img--discount">
+                                            <div class="fier">
+                                                <img src="assets/imges/fier_img.svg" alt="">
+                                            </div>
+                                            <p>-50%</p>
+                                        </div>
+                                        <img src="assets/imges/discounted_item_img.png" alt="">
+                                        <div class="galerea">
+                                            <img src="assets/imges/galerea_img.svg" alt="">
+                                            <p>12</p>
+                                        </div>
+                                    </div>
+                                    <div class="item__information">
+                                        <div class="item__top">
+                                            <div class="item_title">The Apartments Canggu</div>
+                                            <div class="item__location">
+                                                <img src="assets/imges/item_location_img.svg" alt="">
+                                                <p>Batu Bolong, Чангу</p>
+                                            </div>
+                                        </div>
+                                        <div class="item__mone">
+                                            20 450 ₽<span>26 450 ₽</span>
+                                        </div>
+                                        <div class="item__description">
+                                            <p>
+                                                <img src="assets/imges/item__description_img.svg" alt="">
+                                                <span>3</span>
+                                            </p>
+                                            <p>
+                                                <img src="assets/imges/item__description_img1.svg" alt="">
+                                                <span>2</span>
+                                            </p>
+                                            <p>
+                                                <img src="assets/imges/item__description_img2.svg" alt="">
+                                                <span>200,00 m2</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="item__button">
+                                            Забронировать
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__img">
+                                        <div class="item__img--discount">
+                                            <div class="fier">
+                                                <img src="assets/imges/fier_img.svg" alt="">
+                                            </div>
+                                            <p>-50%</p>
+                                        </div>
+                                        <img src="assets/imges/discounted_item_img.png" alt="">
+                                        <div class="galerea">
+                                            <img src="assets/imges/galerea_img.svg" alt="">
+                                            <p>12</p>
+                                        </div>
+                                    </div>
+                                    <div class="item__information">
+                                        <div class="item__top">
+                                            <div class="item_title">2-спальные апартаменты в Apartments <br> Canggu
+    
+                                            </div>
+                                            <div class="item__location">
+                                                <img src="assets/imges/item_location_img.svg" alt="">
+                                                <p>Batu Bolong, Чангу</p>
+                                            </div>
+                                        </div>
+                                        <div class="item__mone">
+                                            20 450 ₽<span>26 450 ₽</span>
+                                        </div>
+                                        <div class="item__description">
+                                            <p>
+                                                <img src="assets/imges/item__description_img.svg" alt="">
+                                                <span>3</span>
+                                            </p>
+                                            <p>
+                                                <img src="assets/imges/item__description_img1.svg" alt="">
+                                                <span>2</span>
+                                            </p>
+                                            <p>
+                                                <img src="assets/imges/item__description_img2.svg" alt="">
+                                                <span>200,00 m2</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="item__button">
+                                            Забронировать
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="item__img">
+                                        <div class="item__img--discount">
+                                            <div class="fier">
+                                                <img src="assets/imges/fier_img.svg" alt="">
+                                            </div>
+                                            <p>-50%</p>
+                                        </div>
+                                        <img src="assets/imges/discounted_item_img.png" alt="">
+                                        <div class="galerea">
+                                            <img src="assets/imges/galerea_img.svg" alt="">
+                                            <p>12</p>
+                                        </div>
+                                    </div>
+                                    <div class="item__information">
+                                        <div class="item__top">
+                                            <div class="item_title">1-спальные апартаменты в Apartments <br> Canggu</div>
+                                            <div class="item__location">
+                                                <img src="assets/imges/item_location_img.svg" alt="">
+                                                <p>Batu Bolong, Чангу</p>
+                                            </div>
+                                        </div>
+                                        <div class="item__mone">
+                                            20 450 ₽<span>26 450 ₽</span>
+                                        </div>
+                                        <div class="item__description">
+                                            <p>
+                                                <img src="assets/imges/item__description_img.svg" alt="">
+                                                <span>3</span>
+                                            </p>
+                                            <p>
+                                                <img src="assets/imges/item__description_img1.svg" alt="">
+                                                <span>2</span>
+                                            </p>
+                                            <p>
+                                                <img src="assets/imges/item__description_img2.svg" alt="">
+                                                <span>200,00 m2</span>
+                                            </p>
+                                        </div>
+                                        <a href="#" class="item__button">
+                                            Забронировать
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-left">
+                        </div>
+                        <div class="swiper-right"></div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="explanation">
+            <div class="container ">
+                <div class="explanation_start">
+                    <div class="left">
+                        <div class="explanation__blog">
+                            <div class="explanation__blog--min">
+                                <div class="explanation__blog--title">Почему выбирают нас</div>
+                                <div class="explanation__blog--text">Гарантируем высокое качество, надежный сервис
+                                    и
+                                    индивидуальный подход к каждому клиенту</div>
+                            </div>
+                            <div class="explanation__blog--img">
+                                <img src="assets/imges/explanation__img.png" alt="">
+                                <img src="assets/imges/explanation_img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="explanation__advantages">
+                            <div class="explanation__advantages--elemelnt">
+                                <div class="title"><img src="assets/imges/explanation__advantages_title.svg" alt="">
+                                    Удобное
+                                    <br>расположение
+                                </div>
+                                <div class="text">
+                                    Апартаменты находятся рядом с<br> ключевыми достопримечательностями <br>и
+                                    транспортными
+                                    узлами
+                                </div>
+                            </div>
+                            <div class="explanation__advantages--elemelnt">
+                                <div class="title"><img src="assets/imges/explanation__advantages_title1.svg"
+                                        alt="">Высокий
+                                    уровень<br> комфорта</div>
+                                <div class="text">
+                                    Современный интерьер, полностью оборудованные кухни и удобные спальные зоны
+                                </div>
+                            </div>
+                            <div class="explanation__advantages--elemelnt">
+                                <div class="title"><img src="assets/imges/explanation__advantages_title2.svg"
+                                        alt="">Гибкие
+                                    условия <br>аренды</div>
+                                <div class="text">
+                                    Предлагаем варианты краткосрочной и долгосрочной аренды по выгодным условиям
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="assets/imges/explanation_right_img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recognitions">
+            <div class="container">
+                <div class="recognitions_rov">
+                    <div class="recognitions__left">
+                        <div class="recognitions__left--title">Награды компании</div>
+                        <ul class="recognitions__left--text">
+                            <li>Наша компания гордится признанием в отрасли и достижениями, которые подтверждают
+                                качество
+                                предоставляемых услуг. Мы получили несколько престижных наград за высокий уровень
+                                сервиса и
+                                комфорт наших апартаментов.</li>
+                            <li>Эти достижения вдохновляют нас продолжать развиваться и предлагать нашим клиентам только
+                                лучшее.</li>
+                        </ul>
+                        <div class="recognitions__left--logo">
+                            <img src="assets/imges/recognitions__left--logo.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="recognitions__right">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/recognitions__right_sweper_img1.jpeg" alt="Hujjat 1" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/recognitions__right_sweper_img.jpeg" alt="Hujjat 2" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/recognitions__right_sweper_img2.jpeg" alt="Hujjat 3" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/imges/recognitions__right_sweper_img.jpeg" alt="Hujjat 2" />
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="special_offers">
+            <div class="container">
+                <div class="special_offers__start">
+                    <div class="special_offers__start--title">Лучшие предложения<span>Найдите идеальное жильё быстро и
+                            без лишних хлопот !</span></div>
+                    <div class="special_offers__start--text">Каталог с 2000+ доступными вариантами жилья. Удобный поиск,
+                        актуальные цены и полная информация о каждом объекте.</div>
+                    <div class="special_offers__start--button"><a href="#">Найти апартаменты</a></div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="testimonial-section--title">Отзывы клиентов</div>
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-card">
+                            <div class="card_header">
+                                <img src="assets/imges/avatar2.png" alt="Foydalanuvchi" />
+                                <div class="card_header--title">Екатерина Петрова <span>Booking / Mars dan fikr</span>
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                Мы арендовали апартаменты и остались очень довольны! Просторные, чистые, со всем необходимым для комфортного проживания. Вся техника работала исправно, а кровати были удобными.
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide testimonial-card">
+                            <div class="card_header">
+                                <img src="assets/imges/avatar1.png" alt="Foydalanuvchi" />
+                                <div class="card_header--title">Anna Smirnova <span>Booking / Mars dan fikr</span></div>
+                            </div>
+                            <div class="card_body">
+                                Отдельно хочется отметить хозяев – отзывчивые и внимательные, всегда были на связи и готовы помочь. Заселение и выезд прошли без проблем.
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide testimonial-card">
+                            <div class="card_header">
+                                <img src="assets/imges/avatar3.png" alt="Foydalanuvchi" />
+                                <div class="card_header--title">Pavel Smirnov <span>Booking / Mars dan fikr</span></div>
+                            </div>
+                            <div class="card_body">
+                                Мы арендовали апартаменты и остались очень довольны! Просторные, чистые, со всем необходимым для комфортного проживания. Вся техника работала исправно, а кровати были удобными.
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide testimonial-card">
+                            <div class="card_header">
+                                <img src="assets/imges/avatar3.png" alt="Foydalanuvchi" />
+                                <div class="card_header--title">Pavel Smirnov <span>Booking / Mars dan fikr</span></div>
+                            </div>
+                            <div class="card_body">
+                                Biz kvartirani ijaraga oldik va juda mamnun bo‘ldik! Keng, toza va qulay yashash uchun
+                                barcha sharoitlarga ega. Barcha texnika ishlayotgan, yotoqlar esa juda qulay edi.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination testimonial-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__logo"><img src="assets/imges/footer_logo.svg" alt=""></div>
+                    <ul class="footer__nav">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Услуги</a></li>
+                    </ul>
+                    <ul class="footer__contak">
+                        <li><a href="tel:89644384482">8 (964) 438-44-82</a></li>
+                        <li><a href="tel:89644384482">8 (964) 438-44-82</a></li>
+                        <li><a href="#">Заказать звонок</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footer__dark">
+            <div class="container">
+                <div class="footer__dark--start">
+                    <ul class="footer__dark--contak">
+                        <li><a href=""><img src="assets/imges/header_WhatsApp.svg" alt=""></a></li>
+                        <li><a href=""><img src="assets/imges/header_Instagram.svg" alt=""></a></li>
+                        <li><a href=""><img src="assets/imges/header_teligram.svg" alt=""></a></li>
+                        <li><a href=""><img src="assets/imges/header_Viber.svg" alt=""></a></li>
+                    </ul>
+                    <div class="footer__dark--data">© 2016–2025, ООО «AMOREA Estate»</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- jQuery kutubxonasi -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Swiper JS (ESM versiyasi) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+    <!-- nice-select -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

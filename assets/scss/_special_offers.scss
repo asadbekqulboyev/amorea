@@ -1,0 +1,100 @@
+.special_offers {
+    background-image: url(../imges/special_offers_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 80px;
+    margin-top: -13px;
+    @media#{$mobile}{
+        background-color: #F5F5DC;
+        margin-bottom: 40px;
+    }
+
+    @media #{$bigTab} {
+        background-image: none;
+        padding-bottom: 0;
+    }
+
+    &__start {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+        width: 550px;
+        border-radius: 0px 0px 8px 8px;
+        background:  #F5F5DC;
+        padding: 40px 24px;
+        @media #{$bigTab} {
+            width: 100%;
+        }
+        @media#{$mobile}{
+            padding: 24px 0;
+            gap:16px 0;
+        }
+
+        &--title {
+            display: flex;
+            flex-direction: column;
+            font-size: 36px;
+            font-weight: 500;
+            gap: 4px 0;
+            @media#{$mobile}{
+                color:#374955;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 42px;
+            }
+
+            span {
+                color:#E07B39;
+                font-size: 18px;
+                font-style: italic;
+                font-weight: 300;
+                @media#{$mobile}{
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 23px;
+                }
+            }
+
+        }
+
+        &--text {
+            font-size: 18px;
+            font-weight: 500;
+            @media#{$mobile}{
+                color:#374955;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 21px;
+            }
+        }
+
+        &--button {
+            display: flex;
+            justify-content: start;
+            @media#{$mobile}{
+                width: 100%;
+            }
+
+            a{
+                color: #FFF;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 12px 24px;
+                border-radius: 4px;
+                background: var(--color_4, #E07B39);
+                text-decoration: none;
+                @media#{$mobile}{
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    padding: 8px 24px;
+                }
+                &:hover{
+                    background: #D27233;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.about-discounted{
+    margin-top: 60px;
+    @media#{$mobile}{
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,178 @@
+.explanation {
+    padding: 60px 0;
+    background: #F5F5DC;
+    @media#{$mobile}{
+        padding: 24px 0;
+        margin-bottom: 40px;
+    }
+    .explanation_start {
+        display: flex;
+        gap: 0 24px;
+        justify-content: space-between;
+    }
+
+    .left {
+        display: flex;
+        justify-content: space-between;
+        gap: 36px 0;
+        flex-direction: column;
+        width: 100%;
+        @media#{$mobile}{
+            gap:16px 0;
+        }
+    }
+
+    &__blog {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @media #{$smallLaptop} {
+
+            flex-direction: column-reverse;
+        }
+
+        &--min {
+            display: flex;
+            flex-direction: column;
+            gap: 4px 0;
+            justify-content: end;
+
+            @media #{$smallLaptop} {
+                order: 2;
+                align-items: start;
+            }
+        }
+
+        &--title {
+            font-size: 36px;
+            font-weight: 500;
+            @media#{$mobile}{
+                color:#374955;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 42px;
+            }
+        }
+
+        &--text {
+            font-size: 18px;
+            font-weight: 500;
+            max-width: 416px;
+            width: 100%;
+            @media#{$mobile}{
+                color:#374955;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 21px;
+            }
+        }
+
+        &--img {
+            display: flex;
+            gap: 11px;
+            order: 1;
+            align-items: start;
+            @media#{$mobile}{
+                margin-top: 16px;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                @media#{$smallLaptop}{
+                    width: 50%;
+                }
+                @media#{$mobile}{
+                    width: 196px;
+                }
+                @media(max-width:375px){
+                    width: 50%;
+                }
+            }
+
+            img:last-child {
+                display: none;
+
+                @media #{$smallLaptop} {
+                    display: block;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    @media#{$mobile}{
+                        width: 144px;
+                    }
+                }
+
+                ;
+            }
+
+            @media #{$smallLaptop} {
+                order: 1;
+            }
+        }
+
+    }
+
+    &__advantages {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px 0;
+        @media#{$mobile}{
+            gap:16px 0;
+        }
+        @media #{$bigTab} {
+            flex-direction: column;
+            br{
+                display: none;
+            }
+        }
+
+        &--elemelnt {
+            display: flex;
+            flex-direction: column;
+            gap: 16px 0;
+            max-width: 306px;
+            @media#{$smallLaptop}{
+                max-width: 100%;
+            }
+            @media#{$leptop}{
+                gap:8px 0;
+            }
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 0 16px;
+                font-size: 18px;
+                font-weight: 700;
+                @media#{$mobile}{
+                    color:#374955;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 23px;
+                }
+            }
+            .text{
+                color:#374955;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+            }
+        }
+    }
+
+    .right {
+        display: block;
+
+        @media #{$smallLaptop} {
+            display: none;
+        }
+
+    }
+}

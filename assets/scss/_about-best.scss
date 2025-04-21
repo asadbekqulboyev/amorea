@@ -1,0 +1,106 @@
+.about-best{
+    margin-top: 60px;
+    background-color:#F5F5DC;
+    padding: 60px 0;
+    @media#{$mobile}{
+        margin-top: 40px;
+        padding: 24px 0;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        @media#{$bigTab}{
+            flex-direction: column;
+        }
+        &--left{
+            .img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        &--right{
+            padding: 24px 60px;
+            @media#{$mobile}{
+                padding: 24px 16px;
+            }
+            .bottom-word{
+                display: flex;
+                align-items: center;
+                gap:0 40px;
+                margin-top: 16px;
+                @media#{$mobile}{
+                    justify-content: center;
+                }
+                .item{
+                    @media#{$mobile}{
+                        display: none;
+                        &:first-child{
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                    span{
+                        display: block;
+                        color:#E07B39;
+                        font-size: 40px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 52px;
+                    }
+                    p{
+                        color:#374955;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+    }
+    &__bottom{
+        margin-top: 40px;
+        display: flex;
+        gap:24px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media#{$mobile}{
+            gap:16px ;
+        }
+        .bottom-item{
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #DCE4C9;
+            display: flex;
+            align-items: flex-start;
+            gap:0 12px;
+            width: 416px;
+            .tex{
+                p{
+                    color:#374955;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 23px;
+                }
+                span{
+                    display: block;
+                    margin-top: 8px;
+                    color:#374955;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height:21px;
+                }
+            }
+        }
+    }
+}

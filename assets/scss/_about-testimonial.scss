@@ -1,0 +1,9 @@
+.about-testimonial{
+    margin-top: 60px;
+    @media#{$mobile}{
+        margin-top: 40px;
+    }
+    .testimonial-card{
+        padding: 22px;
+    }
+}

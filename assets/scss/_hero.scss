@@ -1,0 +1,70 @@
+.hero{
+    background-image: url(../imges/hedr_bg_img.png); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding-bottom: 243px;
+    text-align: center;
+    @media#{$mobile}{
+        padding-bottom: 216px;
+    }
+    .hedt_row{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @media #{$bigTab} {
+            gap: 8px;
+            padding-top: 227px;
+        }
+        @media#{$mobile}{
+            padding-top: 64px;
+        }
+    }
+
+    &_title{
+        color: #FFF;
+        font-size: 62px;
+        font-weight: 700;
+        line-height: 130%;
+        @media #{$bigTab} {
+            font-size: 32px;
+        }
+        @media#{$mobile}{
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 42px;
+        }
+    }
+    &_text{
+        color:  #FFF;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 130%;
+        display: flex;
+        flex-direction: column;
+        @media #{$bigTab} {
+            font-size: 20px;
+        }
+    }
+    &_button{
+        a{
+            color: #FFF;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            padding: 9px 32px;
+            border: 1px solid #FFF;
+            text-decoration: none;
+            transition: .3s all ease;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.10);
+            &:hover{
+                border: 1px solid #D27233;
+                background: #D27233;
+            }
+        }
+       
+    }
+}

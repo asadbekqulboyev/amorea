@@ -1,0 +1,13 @@
+.catalog{
+    .form{
+        margin-top: 40px;
+        .start{
+            transform: translateY(0);
+            form{
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+            }
+        }
+    }
+}
