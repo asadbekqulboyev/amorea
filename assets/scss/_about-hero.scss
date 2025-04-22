@@ -149,6 +149,9 @@
     border-radius: 8px;
     overflow: hidden;
     line-height: 0;
+    @media #{$mobile} {
+      margin-top: 0;
+    }
   }
   .swiper-btns {
     display: flex;
@@ -170,6 +173,7 @@
       z-index: 2;
       line-height: 0;
       top: 5%;
+      cursor: pointer;
     }
   }
   .swiper-slide {

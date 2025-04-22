@@ -2368,6 +2368,11 @@ footer .footer__contak li a:hover {
   overflow: hidden;
   line-height: 0;
 }
+@media (max-width: 512px) {
+  .about-hero .hero_sliders {
+    margin-top: 0;
+  }
+}
 .about-hero .swiper-btns {
   display: flex;
   justify-content: space-between;
@@ -2389,6 +2394,7 @@ footer .footer__contak li a:hover {
   z-index: 2;
   line-height: 0;
   top: 5%;
+  cursor: pointer;
 }
 .about-hero .swiper-slide img {
   width: 100%;
