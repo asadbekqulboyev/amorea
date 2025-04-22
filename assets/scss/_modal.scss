@@ -1,0 +1,267 @@
+.modal {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1000000009;
+  padding: 12px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .flatpickr-calendar.arrowTop:before,
+  .flatpickr-calendar.arrowTop:after {
+    display: none;
+  }
+  &_top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+    .modal_description {
+      text-align: center;
+    }
+  }
+  &_description {
+    color: #374955;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  &_content {
+    border-radius: 8px;
+    background: #fff;
+    padding: 40px;
+    margin: 200px auto;
+    max-width: 464px;
+    @media (max-width: 768px) {
+      padding: 24px 16px;
+    }
+    .input_info {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 24px;
+      .info_text {
+        color: #e07b39;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 130%;
+      }
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  &_title {
+    color: #374955;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+  .button {
+    width: 100%;
+    margin-top: 16px;
+  }
+  input:not([type="radio"]):not([type="checkbox"]):not(.cur-year) {
+    border-radius: 4px;
+    border: 1px solid var(--color_3, #b6a28e);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px 16px;
+    color: #374955;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+    &.error {
+      border-color: #e03939;
+    }
+  }
+  .radio_slect {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+    margin: 24px 0 8px;
+    .custom_radio {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      .msg_title {
+        color: #374955;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        border-bottom: 1px dashed #374955;
+      }
+    }
+    .custom_radio input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .radio_mark {
+      position: relative;
+      top: 2px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid #e07b39;
+      transition: 0.2s;
+    }
+    .radio_mark::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .custom_radio input:checked ~ .radio_mark::after {
+      display: block;
+    }
+
+    .radio_mark::after {
+      top: 3.6px;
+      left: 3.6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #e07b39;
+    }
+  }
+  .check_form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    position: relative;
+    .modal_description {
+      color: #374955;
+      font-family: "Nunito Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      a {
+        color: inherit;
+      }
+    }
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkmark {
+      position: relative;
+      top: 2px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-color: #fff;
+      border-radius: 4px;
+      border: 2px solid #e07b39;
+      transition: 0.2s;
+      flex: 0 0 auto;
+      border-radius: 4px;
+      border: 1px solid #374955;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 13px;
+      height: 10px;
+      inset: 0;
+      background: url(../imges/check_icon.svg) no-repeat center;
+      margin: auto;
+    }
+    input[type="checkbox"]:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  .custom_wrapper {
+    position: relative;
+    left: -25%;
+    margin-top: 24px;
+    @media (max-width: 768px) {
+      left: 0;
+      .flatpickr-calendar {
+        width: 100%;
+      }
+    }
+    .flatpickr-current-month {
+      color: #374955;
+      text-align: center;
+      font-family: "Nunito Sans";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    .dayContainer {
+      gap: 8px 5px;
+    }
+    .flatpickr-day {
+      border-radius: 4px;
+      color: #374955;
+      text-align: center;
+      font-family: "Nunito Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background: #e07c39c5;
+      }
+    }
+    .numInputWrapper {
+      font-weight: 700;
+    }
+    .selected {
+      border-radius: 4px;
+      background: #e07b39;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      border: 0;
+    }
+    .inRange {
+      border-radius: 4px;
+      background: rgba(224, 123, 57, 0.15);
+    }
+    .flatpickr-month {
+      position: relative;
+    }
+    .flatpickr-next-month {
+      right: 0;
+      left: auto;
+    }
+    .flatpickr-months {
+      position: relative;
+    }
+    .flatpickr-day.inRange {
+      color: #000;
+      box-shadow: none !important;
+      outline: none !important;
+      border: none !important;
+    }
+  }
+  .flatpickr-calendar {
+    position: static;
+  }
+}

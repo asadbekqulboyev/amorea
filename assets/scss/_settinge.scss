@@ -103,7 +103,7 @@ a {
     background-color: #d27233;
   }
 }
-.butto {
+.button {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -112,4 +112,12 @@ a {
   background: #e07b39;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.3s all ease;
+  width: fit-content;
+  &:hover {
+    background-color: #d27233;
+  }
 }
