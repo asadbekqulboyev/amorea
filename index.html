@@ -290,7 +290,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Pick a date"
+                  placeholder="Дата выезда"
                   id="kt_datepicker_2"
                 />
                 <img src="assets/imges/form_imput_img.svg" alt="" />
@@ -756,6 +756,7 @@
       <div class="modal_content">
         <div class="mdal_form">
           <input type="text" id="datepicker" />
+          <img src="assets/imges/arrow.svg" alt="" />
           <span class="input_info">
             <span class="info_text">
               Система автоматически отображает доступные даты
@@ -775,7 +776,13 @@
         </div>
         <div class="modal_form">
           <label>
-            <input type="text" id="name" name="firstname" placeholder="Имя" />
+            <input
+              type="text"
+              id="name"
+              name="firstname"
+              placeholder="Имя"
+              id="firstname"
+            />
           </label>
           <div class="radio_slect">
             <label class="custom_radio"
@@ -804,19 +811,30 @@
             </span>
           </label>
         </div>
-        <button class="button">Продолжить</button>
+        <button class="button first">Продолжить</button>
+      </div>
+      <div class="modal_content">
+        <div class="modal_top">
+          <img src="assets/imges/thamks_logo.png" alt="" />
+        </div>
+        <div class="modal_form">
+          <h2 class="form_title">Спасибо</h2>
+          <p class="modal_description">
+            Ваше бронирование успешно оформлено Мы свяжемся с вами ближайшее
+            время.
+          </p>
+        </div>
       </div>
     </form>
     <!-- jQuery kutubxonasi -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ru.js"></script>
     <!-- Swiper JS (ESM versiyasi) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <!-- nice-select -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-    <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
 
     <script src="assets/js/main.js"></script>

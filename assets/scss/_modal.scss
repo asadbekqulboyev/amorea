@@ -24,6 +24,20 @@
     .modal_description {
       text-align: center;
     }
+    img {
+      max-width: 168px;
+      margin: 0 auto;
+    }
+  }
+  .form_title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #374955;
+    margin-bottom: 8px;
   }
   &_description {
     color: #374955;
@@ -40,6 +54,14 @@
     @media (max-width: 768px) {
       padding: 24px 16px;
     }
+    .mdal_form {
+      position: relative;
+    }
+    #datepicker ~ img {
+      position: absolute;
+      right: 21px;
+      top: 22px;
+    }
     .input_info {
       display: flex;
       align-items: flex-start;
@@ -54,7 +76,24 @@
     }
     &:last-child {
       display: none;
+      padding: 40px;
+      @media (max-width: 768px) {
+        padding: 24px 16px;
+        
+      }
+      .modal_description {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        text-align: center;
+      }
     }
+    &:nth-child(2) {
+      display: none;
+    }
+    // &:nth-child(1) {
+    //   display: block;
+    // }
   }
   &_title {
     color: #374955;

@@ -104,9 +104,19 @@ $(document).ready(function () {
       },
     },
   });
+  // slides
+  var slide_items = new Swiper(".slide_items", {
+    navigation: {
+      prevEl: ".img_prev",
+      nextEl: ".img_next",
+    },
+  });
+  $(".item").each(function () {
+    // Har bir .item ichida nechta .swiper-slide borligini hisoblaymiz
+    let slideCount = $(this).find(".swiper-slide").length;
+    $(this).find(".galerea p").text(slideCount);
+  });
   // datepicker
- 
-
   const input = $("#contactInput");
   const errorBox = $(".error-msg");
   const values = {
@@ -199,14 +209,13 @@ $(document).ready(function () {
     $(".modal").fadeIn();
     if ($("#datepicker").length) {
       let isMobile = window.innerWidth <= 768;
-  
       // Flatpickrni ishga tushirish
       const picker = $("#datepicker").flatpickr({
         mode: "range",
         dateFormat: "d.m.Y",
         minDate: "today",
         showMonths: isMobile ? 1 : 2,
-        locale: "ru",
+        locale: flatpickr.l10ns.ru, 
         appendTo: $(".custom_wrapper").length
           ? $(".custom_wrapper")[0]
           : $("body")[0],
@@ -219,21 +228,29 @@ $(document).ready(function () {
           }
         },
       });
-  
+
       // Resize eventni qo‘shish va isMobile qiymatini yangilash
       $(window).on("resize", function () {
         isMobile = window.innerWidth <= 768;
         picker.redraw(); // Agar kerak bo‘lsa, flatpickrni qayta chizish
       });
-  
+
       // "first" tugmasiga bosilganda sana mavjudligini tekshirish
-      $(".first").click(function () {
+      $(".first").click(function (e) {
         const pickerValue = $("#datepicker").val();
         if (pickerValue && pickerValue.length > 0) {
           $(this).parents(".modal_content").next().fadeIn();
           $(this).parents(".modal_content").fadeOut(0);
+          e.preventDefault();
         } else {
           $("#datepicker").focus(); // Inputga fokus qilish
+        }
+        if (
+          $("#contactInput").val().length > 0 &&
+          $("#firstname").val().length > 0
+        ) {
+          $(this).parents(".modal_content").next().fadeIn();
+          $(this).parents(".modal_content").fadeOut(0);
         }
       });
     }

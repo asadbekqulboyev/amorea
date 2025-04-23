@@ -1,145 +1,138 @@
 .form {
-    margin-bottom: 0;
+  margin-bottom: 0;
 
-    .start {
-        transform: translateY(-85%);
-        @media #{$smallLaptop} {
-            transform: translateY(-105%);
-        }
-        @media #{$bigTab} {
-            transform: translateY(-65%);
-        }
-        @media#{$mobile}{
-            transform: translateY(-68%);
-        }
+  .start {
+    transform: translateY(-85%);
+    @media #{$smallLaptop} {
+      transform: translateY(-105%);
+    }
+    @media #{$bigTab} {
+      transform: translateY(-65%);
+    }
+    @media #{$mobile} {
+      transform: translateY(-68%);
+    }
+  }
 
+  form {
+    display: flex;
+    padding: 60px 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    border-radius: 16px;
+    background: var(--color_2, #fff);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+
+    @media #{$smallLaptop} {
+      padding: 30px 20px;
+      gap: 8px;
     }
 
+    @media #{$bigTab} {
+      padding: 30px 20px;
+      flex-direction: column;
+      gap: 16px 0;
+    }
+    @media #{$tab} {
+      padding: 16px;
+    }
 
-    form {
-        display: flex;
-        padding: 60px 40px;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
+    select {
+      display: flex;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid #b6a28e;
+      background: rgba(255, 255, 255, 0.8);
+      width: 246px;
+      color: #374955;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+      outline: none;
+      appearance: none;
+      background-image: url(../imges/str.svg);
+      background-position: calc(100% - 20px) center;
+      background-repeat: no-repeat;
+      @media #{$bigTab} {
         width: 100%;
-        border-radius: 16px;
-        background: var(--color_2, #FFF);
-        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
-
-        @media #{$smallLaptop} {
-            padding: 30px 20px;
-            gap: 8px;
-        }
-
-        @media #{$bigTab} {
-            padding: 30px 20px;
-            flex-direction: column;
-            gap: 16px 0; 
-        }
-        @media #{$tab} {
-            padding: 16px;
-            
-            
-            
-        }
-        
-
-        select {
-            display: flex;
-            padding: 12px 16px;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 4px;
-            border: 1px solid #B6A28E;
-            background: rgba(255, 255, 255, 0.80);
-            width: 246px;
-            color:#374955;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 21px;
-            outline: none;
-            appearance: none;
-            background-image: url(../imges/str.svg);
-            background-position: calc(100% - 20px) center;
-            background-repeat: no-repeat;
-            @media #{$bigTab} {
-                width: 100%;
-            }
-            @media#{$mobile}{
-                padding: 9px 16px;
-            }
-        }
-
-        .date-picker-container {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-shrink: 0;
-            width: 246px;
-            @media#{$smallLaptop}{
-                width: 170px;
-            }
-            @media #{$bigTab} {
-                width: 100%;
-            }
-
-            input {
-                padding: 12px 16px;
-                border-radius: 4px;
-                border: 1px solid #B6A28E;
-                width: 100%;
-                background: rgba(255, 255, 255, 0.80);
-                color:#374955;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 21px;
-                @media #{$bigTab} {
-                    width: 100%;
-                }
-                @media#{$mobile}{
-                    padding: 9px 16px;
-                }
-
-
-                .datePicker::placeholder {
-                    color: #555;
-                    font-weight: 400;
-                    font-size: 16px;
-                }
-
-            }
-
-            img {
-                position: absolute;
-                right: 16px;
-                top: 11px;
-                pointer-events: none;
-            }
-        }
-
-        .button-form {
-            border-radius: 4px;
-            background: var(--color_4, #E07B39);
-            padding: 12px 29px;
-            color: #FFF;
-            font-size: 18px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            @media #{$bigTab} {
-                width: 100%;
-                text-align: center;
-            }
-            @media#{$mobile}{
-                padding: 10px 29px;
-            }
-            &:hover{
-                background: #D27233;
-            }
-        }
+      }
+      @media #{$mobile} {
+        padding: 9px 16px;
+      }
     }
+
+    .date-picker-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      width: 246px;
+      @media #{$smallLaptop} {
+        width: 170px;
+      }
+      @media #{$bigTab} {
+        width: 100%;
+      }
+
+      input {
+        padding: 12px 16px;
+        border-radius: 4px;
+        border: 1px solid #b6a28e;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        color: #374955;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        @media #{$bigTab} {
+          width: 100%;
+        }
+        @media #{$mobile} {
+          padding: 9px 16px;
+        }
+
+        .datePicker::placeholder {
+          color: #555;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+     
+
+      img {
+        position: absolute;
+        right: 16px;
+        top: 11px;
+        pointer-events: none;
+      }
+    }
+
+    .button-form {
+      border-radius: 4px;
+      background: var(--color_4, #e07b39);
+      padding: 12px 29px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      @media #{$bigTab} {
+        width: 100%;
+        text-align: center;
+      }
+      @media #{$mobile} {
+        padding: 10px 29px;
+      }
+      &:hover {
+        background: #d27233;
+      }
+    }
+  }
 }
