@@ -16,12 +16,18 @@
       font-size: 36px;
       font-style: normal;
       font-weight: 500;
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
     }
     a {
       font-size: 18px;
       border-bottom: 1px dashed #374955;
       text-decoration: none;
       font-weight: 600;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
   .service_items {
@@ -31,6 +37,9 @@
     @media (max-width: 1200px) {
       flex-wrap: wrap;
       gap: 24px 0;
+    }
+    @media (max-width: 768px) {
+      margin-top: 18px;
     }
     .service_item {
       width: calc(33% - 12px);

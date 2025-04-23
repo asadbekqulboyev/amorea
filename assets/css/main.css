@@ -3853,11 +3853,22 @@ footer .footer__contak li a:hover {
   font-style: normal;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  .service .service_top .section_title,
+  .service .service_top a {
+    font-size: 32px;
+  }
+}
 .service .service_top a {
   font-size: 18px;
   border-bottom: 1px dashed #374955;
   text-decoration: none;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .service .service_top a {
+    font-size: 16px;
+  }
 }
 .service .service_items {
   display: flex;
@@ -3868,6 +3879,11 @@ footer .footer__contak li a:hover {
   .service .service_items {
     flex-wrap: wrap;
     gap: 24px 0;
+  }
+}
+@media (max-width: 768px) {
+  .service .service_items {
+    margin-top: 18px;
   }
 }
 .service .service_items .service_item {
