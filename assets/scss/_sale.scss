@@ -1,0 +1,147 @@
+.sales_banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  border-radius: 24px;
+  background: #f5f5dc;
+  margin-top: 40px;
+  gap: 20px;
+  @media (max-width: 1024px) {
+    padding: 15px 30px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 24px 16px;
+  }
+  .sales_banner_title {
+    color: #374955;
+    font-family: "Nunito Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    @media (max-width: 1024px) {
+      font-size: 28px;
+    }
+    @media (max-width: 768px) {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  .sales_banner_text {
+    color: #374955;
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 4px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+.sale_card {
+  border-radius: 8px;
+  border: 1px solid #b6a28e;
+  padding: 20px 20px 24px 20px;
+  .sale_card_info {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+  .sale_card_title {
+    color: #374955;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-decoration: none;
+  }
+
+  .sale_card_date {
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    justify-content: space-between;
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      height: 1px;
+      border-bottom: 1px dashed rgba(55, 73, 85, 0.5);
+    }
+    span {
+      background: #fff;
+      position: relative;
+      z-index: 2;
+      padding: 0 4px;
+    }
+  }
+  .sale_card_description {
+    color: #374955;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .button {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.sale {
+  .sale_cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (max-width: 768px) {
+      gap: 0;
+    }
+  }
+  .sale_slider {
+    width: 100%;
+  }
+  .sale_card {
+    width: calc(33.33% - 16px);
+    @media (max-width: 992px) {
+      width: calc(50% - 12px);
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    .sale_card_img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+  }
+  .swiper-pagination {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+      margin-top: 10px;
+      position: relative;
+    }
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.sale_page {
+  .about-hero {
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -215,7 +215,7 @@ $(document).ready(function () {
         dateFormat: "d.m.Y",
         minDate: "today",
         showMonths: isMobile ? 1 : 2,
-        locale: flatpickr.l10ns.ru, 
+        locale: flatpickr.l10ns.ru,
         appendTo: $(".custom_wrapper").length
           ? $(".custom_wrapper")[0]
           : $("body")[0],
@@ -254,6 +254,38 @@ $(document).ready(function () {
         }
       });
     }
+  });
+  let swiperInstance = null;
+
+  function initMobileSwiper() {
+    if (window.innerWidth < 768) {
+      if (!swiperInstance) {
+        swiperInstance = new Swiper(".sale_slider", {
+          slidesPerView: 1,
+          grid: {
+            rows: 3,
+            fill: "row",
+          },
+          spaceBetween: 16,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      }
+    } else {
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
+      }
+    }
+  }
+
+  $(document).ready(function () {
+    initMobileSwiper();
+    $(window).on("resize", function () {
+      initMobileSwiper();
+    });
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
