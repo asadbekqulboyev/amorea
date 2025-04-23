@@ -3692,6 +3692,11 @@ footer .footer__contak li a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .sale_card_page .about-hero {
+    margin-bottom: 40px;
+  }
+}
 .sale_card_page .sales_card {
   display: flex;
   justify-content: space-between;

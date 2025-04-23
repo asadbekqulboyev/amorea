@@ -146,6 +146,11 @@
   }
 }
 .sale_card_page {
+  .about-hero {
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
   .sales_card {
     display: flex;
     justify-content: space-between;
