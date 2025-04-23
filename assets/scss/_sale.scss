@@ -145,3 +145,47 @@
     }
   }
 }
+.sale_card_page {
+  .sales_card {
+    display: flex;
+    justify-content: space-between;
+    gap: 134px;
+    margin-top: 40px;
+    .sales_card_img {
+      width: calc(60% - 20px);
+      img {
+        border-radius: 8px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .sales_card_characteristics {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .sales_card_characteristics_top {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        .sales_card_characteristics_date {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+      }
+      p,
+      a {
+        color: #374955;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        text-decoration: none;
+      }
+      a {
+        border-bottom: 1px dashed #374955;
+        width: fit-content;
+      }
+    }
+  }
+}

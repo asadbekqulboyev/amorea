@@ -3690,4 +3690,47 @@ footer .footer__contak li a:hover {
   .sale_page .about-hero {
     margin-bottom: 24px;
   }
+}
+
+.sale_card_page .sales_card {
+  display: flex;
+  justify-content: space-between;
+  gap: 134px;
+  margin-top: 40px;
+}
+.sale_card_page .sales_card .sales_card_img {
+  width: calc(60% - 20px);
+}
+.sale_card_page .sales_card .sales_card_img img {
+  border-radius: 8px;
+  width: 100%;
+  object-fit: contain;
+}
+.sale_card_page .sales_card .sales_card_characteristics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sale_card_page .sales_card .sales_card_characteristics .sales_card_characteristics_top {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.sale_card_page .sales_card .sales_card_characteristics .sales_card_characteristics_top .sales_card_characteristics_date {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sale_card_page .sales_card .sales_card_characteristics p,
+.sale_card_page .sales_card .sales_card_characteristics a {
+  color: #374955;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: none;
+}
+.sale_card_page .sales_card .sales_card_characteristics a {
+  border-bottom: 1px dashed #374955;
+  width: fit-content;
 }/*# sourceMappingURL=main.css.map */

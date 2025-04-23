@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMOREA</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- nice-select -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <div class="wrapper about_page sale_card_page">
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-links">
+          <a href="#">Главная</a>
+          <a href="#" class="active">О компании</a>
+          <a href="#">Каталог</a>
+          <a href="#">Акции</a>
+          <a href="#">Услуги</a>
+        </div>
+
+        <div class="menu-footer">
+          <a href="#" class="phone">8 (964) 438-44-82</a>
+          <div class="social-icons">
+            <a href="#">
+              <img src="assets/imges/header_WhatsApp.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/imges/header_Instagram.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/imges/header_teligram.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/imges/header_Viber.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <script>
+        function toggleMenu() {
+          document.getElementById("mobileMenu").classList.toggle("open");
+          if (
+            document.querySelector(".mobile-menu").classList.contains("open")
+          ) {
+            document.querySelector(".hamburger").classList.add("active");
+            document.querySelector(".wrapper").style.height = "100vh";
+          } else {
+            document.querySelector(".hamburger").classList.remove("active");
+            document.querySelector(".wrapper").style.height = "auto";
+          }
+        }
+      </script>
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <nav class="header_nav">
+              <div class="smail_logo">
+                <img src="assets/imges/AMOREA_smail_logo.svg" alt="" />
+              </div>
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">O компании</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#" class="active">Акции</a></li>
+                <li><a href="#">Услуги</a></li>
+              </ul>
+              <div class="nav_logo">
+                <img src="assets/imges/AMOREA_logo2.svg" alt="" />
+              </div>
+            </nav>
+            <div class="header_right">
+              <div class="header_right--location">
+                <div class="item">
+                  <img
+                    src="assets/imges/header_language.svg"
+                    alt=""
+                    class="icon mobile"
+                  />
+                  <img
+                    src="assets/imges/header_language2.svg"
+                    alt=""
+                    class="icon desctop"
+                  />
+                  <select>
+                    <option>Русский</option>
+                    <option>English</option>
+                  </select>
+                </div>
+                <div class="item">
+                  <img
+                    src="assets/imges/header_mone_img.svg"
+                    alt=""
+                    class="icon mobile"
+                  />
+                  <img
+                    src="assets/imges/header_mone_img2.svg"
+                    alt=""
+                    class="icon desctop"
+                  />
+                  <select>
+                    <option>RUB</option>
+                    <option>USD</option>
+                    <option>IDR</option>
+                  </select>
+                </div>
+                <div
+                  class="hamburger"
+                  onclick="toggleMenu()"
+                  onclick="toggleMenu()"
+                >
+                  <span class="top"></span>
+                  <span class="center"></span>
+                  <span class="bottom"></span>
+                </div>
+              </div>
+              <ul class="header_right--contacts">
+                <li><a href="tel:89644384482">8 (964) 438-44-82</a></li>
+                <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.99774 18.1908L1.52961 19.1005L2.45531 15.7191L2.23743 15.3724C1.32017 13.9135 0.835716 12.2273 0.836427 10.4959C0.838431 5.44363 4.94912 1.33331 10.0036 1.33331C12.4511 1.33416 14.7518 2.2885 16.4818 4.02056C18.2119 5.75262 19.1641 8.05482 19.1632 10.5033C19.1611 15.5559 15.0505 19.6666 9.99996 19.6666H9.99625C8.35196 19.666 6.73924 19.2243 5.33235 18.3894L4.99774 18.1908Z"
+                        stroke="#374955"
+                      />
+                      <path
+                        d="M15.5541 13.126C15.4852 13.0111 15.3016 12.9421 15.0262 12.8042C14.7507 12.6663 13.3964 12 13.1438 11.908C12.8913 11.8161 12.7076 11.7702 12.524 12.0458C12.3404 12.3216 11.8125 12.9421 11.6518 13.126C11.4911 13.3098 11.3304 13.3328 11.055 13.1949C10.7795 13.057 9.89193 12.7662 8.83972 11.8276C8.0208 11.0972 7.46795 10.1951 7.30726 9.91934C7.14657 9.64355 7.29013 9.49452 7.42803 9.35716C7.55197 9.23369 7.70352 9.03533 7.84125 8.87453C7.97897 8.71372 8.02488 8.59874 8.11671 8.41502C8.20852 8.23109 8.16263 8.07028 8.09374 7.93239C8.02488 7.79449 7.47397 6.43857 7.24442 5.88699C7.0208 5.34984 6.79371 5.4226 6.62463 5.41412C6.46413 5.40606 6.28028 5.40436 6.09666 5.40436C5.91303 5.40436 5.61457 5.47331 5.36208 5.74909C5.10958 6.02488 4.39795 6.69134 4.39795 8.04716C4.39795 9.40309 5.38502 10.713 5.52276 10.8968C5.66049 11.0807 7.46521 13.8631 10.2286 15.0563C10.8858 15.3401 11.3989 15.5096 11.799 15.6366C12.4589 15.8463 13.0595 15.8167 13.534 15.7457C14.0633 15.6667 15.1638 15.0794 15.3935 14.4359C15.6229 13.7924 15.6229 13.2408 15.5541 13.126Z"
+                        stroke="#374955"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.99675 1.33605C9.2945 1.33558 9.62674 1.33605 9.99998 1.33605C12.9859 1.33605 13.3398 1.34677 14.519 1.40035C15.6093 1.45021 16.2011 1.6324 16.5953 1.78548C17.1172 1.98817 17.4893 2.23048 17.8805 2.62189C18.2719 3.0133 18.5142 3.38608 18.7173 3.90797C18.8704 4.30171 19.0528 4.89349 19.1025 5.98386C19.156 7.16276 19.1677 7.5169 19.1677 10.5014C19.1677 13.486 19.156 13.8401 19.1025 15.019C19.0526 16.1094 18.8704 16.7012 18.7173 17.0949C18.5146 17.6168 18.2719 17.9884 17.8805 18.3796C17.489 18.771 17.1174 19.0133 16.5953 19.216C16.2016 19.3698 15.6093 19.5515 14.519 19.6014C13.34 19.6549 12.9859 19.6666 9.99998 19.6666C7.01381 19.6666 6.65991 19.6549 5.48101 19.6014C4.39064 19.551 3.79886 19.3688 3.40442 19.2158C2.88253 19.0131 2.50975 18.7708 2.11834 18.3793C1.72693 17.9879 1.48462 17.6161 1.28146 17.094C1.12839 16.7002 0.945961 16.1084 0.896335 15.0181C0.842749 13.8392 0.832031 13.485 0.832031 10.4986C0.832031 7.51224 0.842749 7.15997 0.896335 5.98106C0.946194 4.8907 1.12839 4.29891 1.28146 3.9047C1.48416 3.38282 1.72693 3.01004 2.11834 2.61863C2.50975 2.22721 2.88253 1.98491 3.40442 1.78175C3.79863 1.62798 4.39064 1.44625 5.48101 1.39616C6.51266 1.34956 6.91247 1.33558 8.99675 1.33325V1.33605Z"
+                        stroke="#374955"
+                      />
+                      <path
+                        d="M15.9699 3.19322C15.229 3.19322 14.6279 3.79362 14.6279 4.53474C14.6279 5.27563 15.229 5.87673 15.9699 5.87673C16.7108 5.87673 17.3119 5.27563 17.3119 4.53474C17.3119 3.79385 16.7108 3.19275 15.9699 3.19275V3.19322Z"
+                        stroke="#374955"
+                      />
+                      <path
+                        d="M9.99991 4.76141C6.82829 4.76141 4.25684 7.33287 4.25684 10.5045C4.25684 13.6761 6.82829 16.2464 9.99991 16.2464C13.1715 16.2464 15.7421 13.6761 15.7421 10.5045C15.7421 7.33287 13.1713 4.76141 9.99968 4.76141H9.99991Z"
+                        stroke="#374955"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="17"
+                      viewBox="0 0 20 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.01592 10.9595L7.72907 15.257C8.15055 15.257 8.33678 15.0642 8.57203 14.8355L10.597 12.8664L14.8099 15.979C15.5852 16.4068 16.1448 16.1853 16.3379 15.2592L19.1035 2.22661C19.3867 1.09139 18.6708 0.576513 17.9291 0.913247L1.6895 7.17517C0.580992 7.61979 0.587455 8.23822 1.48744 8.51379L5.65489 9.81451L15.303 3.72765C15.7584 3.45145 16.1765 3.59994 15.8334 3.90444L8.01568 10.9593L8.01592 10.9595Z"
+                        fill="#374955"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <path
+                        d="M17.0974 2.55442C16.617 2.10174 14.6757 0.662508 10.3517 0.642955C10.3517 0.642955 5.25247 0.32892 2.76669 2.65752C1.38296 4.07097 0.896191 6.13916 0.844845 8.70329C0.793499 11.2674 0.727068 16.0727 5.26262 17.3757H5.26697L5.26407 19.3639C5.26407 19.3639 5.23506 20.1688 5.75403 20.333C6.38178 20.532 6.7502 19.9203 7.34952 19.2608C7.67848 18.8988 8.13277 18.367 8.47507 17.9605C11.577 18.2271 13.9627 17.6177 14.2336 17.5277C14.8599 17.3203 18.404 16.8564 18.9804 12.0516C19.5753 7.09904 18.6926 3.96639 17.0974 2.55442ZM17.623 11.6964C17.1366 15.7083 14.2621 15.9605 13.7321 16.1341C13.5067 16.2081 11.4114 16.7405 8.77647 16.5648C8.77647 16.5648 6.81315 18.9838 6.1999 19.6127C6.10417 19.7111 5.99161 19.7508 5.91648 19.7313C5.81089 19.7049 5.78188 19.5772 5.78304 19.3906C5.78478 19.1239 5.79986 16.0867 5.79986 16.0867C5.79754 16.0867 5.79986 16.0867 5.79986 16.0867C1.96314 14.9988 2.1868 10.9089 2.23031 8.76728C2.27383 6.62562 2.66777 4.87117 3.83799 3.69117C5.94056 1.74623 10.2719 2.03686 10.2719 2.03686C13.9296 2.05315 15.6823 3.17805 16.0888 3.55489C17.4383 4.73489 18.1258 7.55854 17.623 11.6952V11.6964Z"
+                        fill="#374955"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10.4261 7.03459C10.4332 6.89685 10.5482 6.79101 10.6831 6.7982C11.1877 6.82508 11.6075 6.98108 11.9065 7.29682C12.2044 7.61134 12.3504 8.05074 12.3761 8.57845C12.3827 8.71621 12.2788 8.83343 12.1439 8.84027C12.009 8.8471 11.8943 8.74096 11.8876 8.6032C11.8656 8.15147 11.7443 7.84395 11.555 7.64407C11.3668 7.4454 11.0797 7.3195 10.6576 7.29701C10.5227 7.28983 10.4191 7.17234 10.4261 7.03459Z"
+                        fill="#374955"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10.0554 5.68905C10.0652 5.55149 10.1824 5.44813 10.3171 5.4582C11.344 5.53495 12.1706 5.89331 12.7727 6.56452L12.7728 6.56462C13.3684 7.22922 13.6514 8.056 13.6309 9.02575C13.6279 9.16365 13.5161 9.27302 13.3811 9.27004C13.2461 9.26705 13.139 9.15284 13.1419 9.01494C13.16 8.15974 12.9138 7.46176 12.412 6.90183C11.9118 6.34422 11.2125 6.02595 10.2814 5.95636C10.1467 5.94629 10.0455 5.82661 10.0554 5.68905Z"
+                        fill="#374955"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.62354 4.40993C9.62448 4.27201 9.73473 4.16097 9.86978 4.16193C11.289 4.17203 12.4885 4.65453 13.4517 5.61341C14.4229 6.5803 14.9032 7.89664 14.9153 9.53151C14.9164 9.66944 14.8077 9.7821 14.6727 9.78315C14.5376 9.7842 14.4273 9.67324 14.4263 9.53531C14.4149 8.00336 13.9686 6.82558 13.1103 5.97108C12.2439 5.10855 11.1682 4.67067 9.86638 4.66141C9.73132 4.66045 9.6226 4.54786 9.62354 4.40993Z"
+                        fill="#374955"
+                      />
+                      <path
+                        d="M10.719 11.9358C10.719 11.9358 11.0628 11.9654 11.2479 11.7326L11.6088 11.2689C11.7828 11.039 12.2029 10.8924 12.6142 11.1264C12.9225 11.306 13.2217 11.5011 13.5109 11.7112C13.7838 11.9162 14.3428 12.3926 14.3446 12.3926C14.6109 12.6222 14.6724 12.9594 14.4911 13.3149C14.4911 13.317 14.4896 13.3205 14.4896 13.3223C14.2899 13.6758 14.0364 13.9946 13.7386 14.2668C13.7351 14.2685 13.7351 14.2703 13.7319 14.2721C13.4732 14.4929 13.2189 14.6184 12.9693 14.6487C12.9325 14.6552 12.8952 14.6576 12.8579 14.6558C12.7478 14.6568 12.6382 14.6396 12.5336 14.6048L12.5254 14.5927C12.1408 14.4819 11.4985 14.2046 10.429 13.602C9.81002 13.2574 9.22077 12.8598 8.66753 12.4137C8.39023 12.1902 8.12572 11.9506 7.8753 11.6961L7.84861 11.6689L7.82192 11.6416L7.79523 11.6144C7.78624 11.6055 7.77754 11.5963 7.76855 11.5871C7.51939 11.3314 7.2848 11.0612 7.06595 10.778C6.62913 10.2131 6.23989 9.6114 5.9024 8.97943C5.31236 7.88682 5.04083 7.2315 4.93234 6.83806L4.92045 6.82977C4.88644 6.72284 4.86969 6.61097 4.87084 6.49855C4.86881 6.46049 4.87105 6.42232 4.87751 6.38479C4.90865 6.1302 5.03174 5.87038 5.2468 5.60533C5.24854 5.60207 5.25028 5.60207 5.25202 5.59851C5.51841 5.29435 5.8306 5.03552 6.17683 4.83179C6.17857 4.83179 6.18205 4.83002 6.18408 4.83002C6.53218 4.64485 6.86231 4.70766 7.08684 4.97815C7.08858 4.97992 7.55417 5.55082 7.75404 5.8296C7.95978 6.12519 8.1509 6.43111 8.32668 6.74622C8.55585 7.16602 8.41226 7.5959 8.18715 7.77306L7.73316 8.14161C7.50398 8.33062 7.53415 8.68169 7.53415 8.68169C7.53415 8.68169 8.20658 11.2808 10.719 11.9358Z"
+                        fill="#374955"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="about-hero">
+        <div class="container">
+          <div class="about-hero__navbar">
+            <a href="/">Главная</a>
+            <span>/</span>
+            <a href="sale_card.html">Акции</a>
+          </div>
+          <div class="sales_card">
+            <div class="sales_card_img">
+              <img src="assets/imges/card_img.png" alt="">
+            </div>
+            <div class="sales_card_characteristics">
+              <div class="sales_card_characteristics_top">
+                <h2>Раннее бронирование – выгоднее!</h2>
+                <div class="sales_card_characteristics_date">
+                  <div class="sales_card_characteristics_item">
+                    <span>Дата начала акции</span>
+                    <span>31.01.2025</span>
+                  </div>
+                  <div class="sales_card_characteristics_item">
+                    <span>Дата окончания акции</span>
+                    <span>15.03.2025</span>
+                  </div>
+                </div>
+                <p class="card_description">Бронируйте апартаменты заранее и получайте скидку! При оформлении брони за 30 дней до заезда – скидка 15%. Это отличная возможность сэкономить на проживании и спланировать поездку без спешки.</p>
+                <p class="card_description">Выбирайте комфорт по выгодной цене и наслаждайтесь отдыхом! </p>
+              </div>
+              <a href="sale.html">Вернуться на страницу акций</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sale">
+        <div class="container">
+          <div class="swiper sale_slider">
+            <div class="sale_cards swiper-wrapper">
+              <div class="sale_card swiper-slide">
+                <a href="#">
+                  <img
+                    src="assets/imges/sale1.png"
+                    alt=""
+                    class="sale_card_img"
+                  />
+                </a>
+
+                <div class="sale_card_info">
+                  <a href="#" class="sale_card_title">
+                    Седьмая ночь в подарок!
+                  </a>
+                  <div class="sale_card_date">
+                    <span>Дата</span>
+                    <span>31.01.2025 - 15.03.2025</span>
+                  </div>
+                  <p class="sale_card_description">
+                    Забронируйте апартаменты прямо сейчас и получите скидку 10%
+                    на проживание!
+                  </p>
+                  <a href="#" class="button">Подробнее</a>
+                </div>
+              </div>
+              <div class="sale_card swiper-slide">
+                <a href="#">
+                  <img
+                    src="assets/imges/sale2.png"
+                    alt=""
+                    class="sale_card_img"
+                  />
+                </a>
+
+                <div class="sale_card_info">
+                  <a href="#" class="sale_card_title">
+                    Первая бронь – со скидкой 20%
+                  </a>
+                  <div class="sale_card_date">
+                    <span>Дата</span>
+                    <span>31.01.2025 - 15.03.2025</span>
+                  </div>
+                  <p class="sale_card_description">
+                    Забронируйте апартаменты прямо сейчас и получите скидку 10%
+                    на проживание!
+                  </p>
+                  <a href="#" class="button">Подробнее</a>
+                </div>
+              </div>
+              <div class="sale_card swiper-slide">
+                <a href="#">
+                  <img
+                    src="assets/imges/sale3.png"
+                    alt=""
+                    class="sale_card_img"
+                  />
+                </a>
+
+                <div class="sale_card_info">
+                  <a href="#" class="sale_card_title">
+                    Раннее бронирование – выгоднее!
+                  </a>
+                  <div class="sale_card_date">
+                    <span>Дата</span>
+                    <span>31.01.2025 - 15.03.2025</span>
+                  </div>
+                  <p class="sale_card_description">
+                    Забронируйте апартаменты прямо сейчас и получите скидку 10%
+                    на проживание!
+                  </p>
+                  <a href="#" class="button">Подробнее</a>
+                </div>
+              </div>
+              <div class="sale_card swiper-slide">
+                <a href="#">
+                  <img
+                    src="assets/imges/sale4.png"
+                    alt=""
+                    class="sale_card_img"
+                  />
+                </a>
+
+                <div class="sale_card_info">
+                  <a href="#" class="sale_card_title">
+                    Раннее бронирование – выгоднее!
+                  </a>
+                  <div class="sale_card_date">
+                    <span>Дата</span>
+                    <span>31.01.2025 - 15.03.2025</span>
+                  </div>
+                  <p class="sale_card_description">
+                    Забронируйте апартаменты прямо сейчас и получите скидку 10%
+                    на проживание!
+                  </p>
+                  <a href="#" class="button">Подробнее</a>
+                </div>
+              </div>
+              <div class="sale_card swiper-slide">
+                <a href="#">
+                  <img
+                    src="assets/imges/sale5.png"
+                    alt=""
+                    class="sale_card_img"
+                  />
+                </a>
+
+                <div class="sale_card_info">
+                  <a href="#" class="sale_card_title">
+                    Первая бронь – со скидкой 20%
+                  </a>
+                  <div class="sale_card_date">
+                    <span>Дата</span>
+                    <span>31.01.2025 - 15.03.2025</span>
+                  </div>
+                  <p class="sale_card_description">
+                    Забронируйте апартаменты прямо сейчас и получите скидку 10%
+                    на проживание!
+                  </p>
+                  <a href="#" class="button">Подробнее</a>
+                </div>
+              </div>
+              <div class="sale_card swiper-slide">
+                <a href="#">
+                  <img
+                    src="assets/imges/sale1.png"
+                    alt=""
+                    class="sale_card_img"
+                  />
+                </a>
+
+                <div class="sale_card_info">
+                  <a href="#" class="sale_card_title">
+                    Седьмая ночь в подарок!
+                  </a>
+                  <div class="sale_card_date">
+                    <span>Дата</span>
+                    <span>31.01.2025 - 15.03.2025</span>
+                  </div>
+                  <p class="sale_card_description">
+                    Забронируйте апартаменты прямо сейчас и получите скидку 10%
+                    на проживание!
+                  </p>
+                  <a href="#" class="button">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonial-section">
+        <div class="container">
+          <div class="testimonial-section--title">Отзывы клиентов</div>
+          <div
+            class="swiper testimonialSwiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+          >
+            <div
+              class="swiper-wrapper"
+              id="swiper-wrapper-35b0c1adbbea6539"
+              aria-live="polite"
+              style="
+                transition-duration: 0ms;
+                transform: translate3d(-1743px, 0px, 0px);
+                transition-delay: 0ms;
+              "
+            >
+              <div
+                class="swiper-slide testimonial-card swiper-slide-next"
+                role="group"
+                aria-label="4 / 4"
+                data-swiper-slide-index="3"
+                style="width: 551px; margin-right: 30px"
+              >
+                <div class="card_header">
+                  <img src="assets/imges/avatar3.png" alt="Foydalanuvchi" />
+                  <div class="card_header--title">
+                    Pavel Smirnov <span>Booking / Mars dan fikr</span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  Biz kvartirani ijaraga oldik va juda mamnun bo‘ldik! Keng,
+                  toza va qulay yashash uchun barcha sharoitlarga ega. Barcha
+                  texnika ishlayotgan, yotoqlar esa juda qulay edi.
+                </div>
+              </div>
+              <div
+                class="swiper-slide testimonial-card"
+                role="group"
+                aria-label="1 / 4"
+                data-swiper-slide-index="0"
+                style="width: 551px; margin-right: 30px"
+              >
+                <div class="card_header">
+                  <img src="assets/imges/avatar2.png" alt="Foydalanuvchi" />
+                  <div class="card_header--title">
+                    Екатерина Петрова <span>Booking / Mars dan fikr</span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  Мы арендовали апартаменты и остались очень довольны!
+                  Просторные, чистые, со всем необходимым для комфортного
+                  проживания. Вся техника работала исправно, а кровати были
+                  удобными.
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide testimonial-card swiper-slide-prev"
+                role="group"
+                aria-label="2 / 4"
+                data-swiper-slide-index="1"
+                style="width: 551px; margin-right: 30px"
+              >
+                <div class="card_header">
+                  <img src="assets/imges/avatar1.png" alt="Foydalanuvchi" />
+                  <div class="card_header--title">
+                    Anna Smirnova <span>Booking / Mars dan fikr</span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  Отдельно хочется отметить хозяев – отзывчивые и внимательные,
+                  всегда были на связи и готовы помочь. Заселение и выезд прошли
+                  без проблем.
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide testimonial-card swiper-slide-active"
+                role="group"
+                aria-label="3 / 4"
+                data-swiper-slide-index="2"
+                style="width: 551px; margin-right: 30px"
+              >
+                <div class="card_header">
+                  <img src="assets/imges/avatar3.png" alt="Foydalanuvchi" />
+                  <div class="card_header--title">
+                    Pavel Smirnov <span>Booking / Mars dan fikr</span>
+                  </div>
+                </div>
+                <div class="card_body">
+                  Мы арендовали апартаменты и остались очень довольны!
+                  Просторные, чистые, со всем необходимым для комфортного
+                  проживания. Вся техника работала исправно, а кровати были
+                  удобными.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-pagination testimonial-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+            >
+              <span
+                class="swiper-pagination-bullet"
+                tabindex="0"
+                role="button"
+                aria-label="Go to slide 1"
+              ></span
+              ><span
+                class="swiper-pagination-bullet"
+                tabindex="0"
+                role="button"
+                aria-label="Go to slide 2"
+              ></span
+              ><span
+                class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                tabindex="0"
+                role="button"
+                aria-label="Go to slide 3"
+                aria-current="true"
+              ></span
+              ><span
+                class="swiper-pagination-bullet"
+                tabindex="0"
+                role="button"
+                aria-label="Go to slide 4"
+              ></span>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></span>
+          </div>
+        </div>
+      </section>
+      <footer class="about-footer">
+        <div class="container">
+          <div class="footer">
+            <div class="footer__logo">
+              <img src="assets/imges/footer_logo.svg" alt="" />
+            </div>
+            <ul class="footer__nav">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Услуги</a></li>
+            </ul>
+            <ul class="footer__contak">
+              <li><a href="tel:89644384482">8 (964) 438-44-82</a></li>
+              <li><a href="tel:89644384482">8 (964) 438-44-82</a></li>
+              <li><a href="#">Заказать звонок</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="footer__dark">
+        <div class="container">
+          <div class="footer__dark--start">
+            <ul class="footer__dark--contak">
+              <li>
+                <a href=""
+                  ><img src="assets/imges/header_WhatsApp.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="assets/imges/header_Instagram.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="assets/imges/header_teligram.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="assets/imges/header_Viber.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+            <div class="footer__dark--data">
+              © 2016–2025, ООО «AMOREA Estate»
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
