@@ -25,8 +25,19 @@
         font-weight: 600;
         line-height: 23px;
         cursor: pointer;
+        @media (max-width: 768px) {
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7) {
+            display: none;
+          }
+        }
         span {
-          display: block;
+          display: flex;
+          width: 32px;
+          height: 32px;
+          align-items: center;
+          justify-content: center;
         }
         input {
           display: none;

@@ -426,7 +426,8 @@ $(document).ready(function () {
   function initDatePickers(
     checkinSelector = "#checkin",
     checkoutSelector = "#checkout"
-  ) {
+  ) 
+  {
     const checkin = flatpickr(checkinSelector, {
       locale: "ru",
       dateFormat: "Y-m-d",

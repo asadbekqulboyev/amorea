@@ -1377,7 +1377,6 @@ a {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  display: none;
 }
 
 .dayContainer {
@@ -3821,8 +3820,17 @@ footer .footer__contak li a:hover {
   line-height: 23px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .catalog .discounted__pagination label:nth-child(5), .catalog .discounted__pagination label:nth-child(6), .catalog .discounted__pagination label:nth-child(7) {
+    display: none;
+  }
+}
 .catalog .discounted__pagination label span {
-  display: block;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
 }
 .catalog .discounted__pagination label input {
   display: none;
