@@ -236,49 +236,143 @@
         <section class="form">
           <div class="container">
             <div class="start">
+                <!-- <form id="bookingForm">
+                  <div class="dropdown-container">
+                    <input
+                      type="text"
+                      id="tourChoosing1"
+                      name="selectedAreas"
+                      placeholder="Район Бали"
+                      readonly
+                    />
+                    <div class="dropdown-list">
+                      <label
+                        ><input type="checkbox" hidden value="Нуса-Дуа" />
+                        Нуса-Дуа</label
+                      >
+                      <label
+                        ><input type="checkbox" hidden value="Семиньяк" />
+                        Семиньяк</label
+                      >
+                      <label
+                        ><input type="checkbox" hidden value="Чангу" />
+                        Чангу</label
+                      >
+                      <label
+                        ><input type="checkbox" hidden value="Джимбаран" />
+                        Джимбаран</label
+                      >
+                      <label
+                        ><input type="checkbox" hidden value="Семиньяк" />
+                        Семиньяк</label
+                      >
+                      <label
+                        ><input type="checkbox" hidden value="Чангу" />
+                        Чангу</label
+                      >
+                      <label
+                        ><input type="checkbox" hidden value="Джимбаран" />
+                        Джимбаран</label
+                      >
+                    </div>
+                  </div>
+                  <div class="dropdown-container">
+                    <input
+                      type="text"
+                      id="tourChoosing2"
+                      name="home"
+                      placeholder="Количество комнат"
+                      readonly
+                    />
+                    <div class="dropdown-list">
+                      <label> 1 комнаты </label>
+                      <label> 2 комнаты </label>
+                      <label> 3 комнаты </label>
+                      <label> 4 комнаты </label>
+                    </div>
+                  </div>
+                  <div class="date-picker-container">
+                    <input
+                      type="text"
+                      class="datePicker"
+                      id="kt_datepicker_1"
+                      placeholder="Выбрать дату"
+                    />
+                    <img src="assets/imges/form_imput_img.svg" alt="" />
+                  </div>
+                  <div class="date-picker-container">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Дата выезда"
+                      id="kt_datepicker_2"
+                    />
+                    <img src="assets/imges/form_imput_img.svg" alt="" />
+                  </div>
+                  <button class="button-form">Продолжить</button>
+                </form> -->
               <form id="bookingForm">
-                <select name="tourType1" id="tourChoosing1">
-                  <option value="" selected disabled data-placeholder="true">
-                    Выбрать тур
-                  </option>
-                  <option value="1">Название тура 1</option>
-                  <option value="2">Название тура 2</option>
-                  <option value="3">Название тура 3</option>
-                  <option value="4">Название тура 4</option>
-                  <option value="5">Название тура 5</option>
-                  <option value="6">Название тура 6</option>
-                </select>
-                <select
-                  name="tourType2"
-                  id="tourChoosing2"
-                  data-bs-target="#kt_modal_1"
-                >
-                  <option value="" selected disabled data-placeholder="true">
-                    Выбрать тур
-                  </option>
-                  <option value="1">Название тура 1</option>
-                  <option value="2">Название тура 2</option>
-                  <option value="3">Название тура 3</option>
-                  <option value="4">Название тура 4</option>
-                  <option value="5">Название тура 5</option>
-                  <option value="6">Название тура 6</option>
-                </select>
-                <div class="date-picker-container">
+                <div class="dropdown-container">
                   <input
                     type="text"
-                    class="datePicker"
-                    id="kt_datepicker_1"
-                    placeholder="Выбрать дату"
+                    id="tourChoosing1"
+                    name="selectedAreas"
+                    placeholder="Район Бали"
+                    readonly
                   />
-                  <img src="assets/imges/form_imput_img.svg" alt="" />
+                  <div class="dropdown-list">
+                    <label
+                      ><input type="checkbox" hidden value="Нуса-Дуа" />
+                      Нуса-Дуа</label
+                    >
+                    <label
+                      ><input type="checkbox" hidden value="Семиньяк" />
+                      Семиньяк</label
+                    >
+                    <label
+                      ><input type="checkbox" hidden value="Чангу" />
+                      Чангу</label
+                    >
+                    <label
+                      ><input type="checkbox" hidden value="Джимбаран" />
+                      Джимбаран</label
+                    >
+                    <label
+                      ><input type="checkbox" hidden value="Семиньяк" />
+                      Семиньяк</label
+                    >
+                    <label
+                      ><input type="checkbox" hidden value="Чангу" />
+                      Чангу</label
+                    >
+                    <label
+                      ><input type="checkbox" hidden value="Джимбаран" />
+                      Джимбаран</label
+                    >
+                  </div>
+                </div>
+                <div class="dropdown-container">
+                  <input
+                    type="text"
+                    id="tourChoosing2"
+                    name="home"
+                    placeholder="Количество комнат"
+                    readonly
+                  />
+                  <div class="dropdown-list">
+                    <label> 1 комнаты </label>
+                    <label> 2 комнаты </label>
+                    <label> 3 комнаты </label>
+                    <label> 4 комнаты </label>
+                  </div>
                 </div>
                 <div class="date-picker-container">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Дата выезда"
-                    id="kt_datepicker_2"
-                  />
+                  <input type="text" id="checkin" placeholder="Выбрать дату" />
+                  <img src="assets/imges/form_imput_img.svg" alt="" />
+                </div>
+
+                <div class="date-picker-container">
+                  <input type="text" placeholder="Дата выезда" id="checkout" />
                   <img src="assets/imges/form_imput_img.svg" alt="" />
                 </div>
                 <button class="button-form">Продолжить</button>
@@ -298,14 +392,16 @@
                 <select id="sort_select">
                   <option value="popular" selected>По популярности</option>
                   <option value="rating">Выше рейтинг</option>
-                  <option value="cheap" >Дешевле</option>
+                  <option value="cheap">Дешевле</option>
                   <option value="expensive">Дороже</option>
                   <option value="new">Новинки</option>
                   <option value="best">Выгодные</option>
                 </select>
-                
+
                 <div class="price_dropdown">
-                  <div class="price_toggle">Цена <span><img src="assets/imges/str.svg" alt=""></span></div>
+                  <div class="price_toggle">
+                    Цена <span><img src="assets/imges/str.svg" alt="" /></span>
+                  </div>
 
                   <div class="price_popup">
                     <div class="price_inputs">

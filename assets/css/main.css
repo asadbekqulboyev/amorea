@@ -1175,6 +1175,57 @@ a {
     transform: translateY(-68%);
   }
 }
+.form .date-picker-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 246px;
+}
+@media (max-width: 1280px) {
+  .form .date-picker-container {
+    width: 170px;
+  }
+}
+@media (max-width: 1024px) {
+  .form .date-picker-container {
+    width: 100%;
+  }
+}
+.form .date-picker-container input {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #b6a28e;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #374955;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+@media (max-width: 1024px) {
+  .form .date-picker-container input {
+    width: 100%;
+  }
+}
+@media (max-width: 512px) {
+  .form .date-picker-container input {
+    padding: 9px 16px;
+  }
+}
+.form .date-picker-container input .datePicker::placeholder {
+  color: #555;
+  font-weight: 400;
+  font-size: 16px;
+}
+.form .date-picker-container img {
+  position: absolute;
+  right: 16px;
+  top: 11px;
+  pointer-events: none;
+}
 .form form {
   display: flex;
   padding: 60px 40px;
@@ -1253,7 +1304,7 @@ a {
   width: 100%;
   max-height: 150px;
   overflow-y: auto;
-  z-index: 1;
+  z-index: 12999;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1286,63 +1337,13 @@ a {
   font-weight: 400;
   line-height: 130%;
   border-radius: 4px;
+  background: #fff;
 }
 .form form .dropdown-container .dropdown-list label:first-child {
   margin-top: 0;
 }
 .form form .dropdown-container .dropdown-list label:hover {
   background-color: #f0f0f0;
-}
-.form form .date-picker-container {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-  width: 246px;
-}
-@media (max-width: 1280px) {
-  .form form .date-picker-container {
-    width: 170px;
-  }
-}
-@media (max-width: 1024px) {
-  .form form .date-picker-container {
-    width: 100%;
-  }
-}
-.form form .date-picker-container input {
-  padding: 12px 16px;
-  border-radius: 4px;
-  border: 1px solid #b6a28e;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  color: #374955;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-}
-@media (max-width: 1024px) {
-  .form form .date-picker-container input {
-    width: 100%;
-  }
-}
-@media (max-width: 512px) {
-  .form form .date-picker-container input {
-    padding: 9px 16px;
-  }
-}
-.form form .date-picker-container input .datePicker::placeholder {
-  color: #555;
-  font-weight: 400;
-  font-size: 16px;
-}
-.form form .date-picker-container img {
-  position: absolute;
-  right: 16px;
-  top: 11px;
-  pointer-events: none;
 }
 .form form .button-form {
   border-radius: 4px;
@@ -1366,6 +1367,79 @@ a {
   }
 }
 .form form .button-form:hover {
+  background: #d27233;
+}
+
+.flatpickr-current-month {
+  color: #374955;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  display: none;
+}
+
+.dayContainer {
+  gap: 8px 5px;
+}
+
+.flatpickr-day {
+  border-radius: 4px;
+  color: #374955;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flatpickr-day:hover {
+  background: rgba(224, 124, 57, 0.7725490196);
+}
+
+.numInputWrapper {
+  font-weight: 700;
+}
+
+.selected {
+  border: 0;
+}
+
+.dayContainer .flatpickr-day.flatpickr-disabled,
+.dayContainer .flatpickr-day.flatpickr-disabled:hover {
+  background: #fff;
+  color: #374955;
+}
+
+.inRange {
+  border-radius: 4px;
+  background: rgba(224, 123, 57, 0.15);
+}
+
+.flatpickr-month {
+  position: relative;
+}
+
+.flatpickr-next-month {
+  right: 0;
+  left: auto;
+}
+
+.flatpickr-months {
+  position: relative;
+}
+
+.flatpickr-day.inRange {
+  color: #000;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.flatpickr-day.selected {
   background: #d27233;
 }
 

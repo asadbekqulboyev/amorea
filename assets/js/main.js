@@ -396,16 +396,57 @@ $(document).ready(function () {
   }
 
   initDropdown(".dropdown-container");
-  $("#tourChoosing2").click(function () {
-    $(this).toggleClass("active");
-    $(this).next(".dropdown-list").slideToggle();
-    $(this)
-      .next(".dropdown-list label")
-      .click(function () {
-        $("#tourChoosing2").val($(this).next(".dropdown-list label").text());
-        $("#tourChoosing2").text($(this).next(".dropdown-list label").text());
-      });
-  });
+  function Selects2() {
+    const $input = $("#tourChoosing2");
+    const $dropdown = $input.next(".dropdown-list");
+
+    // Inputni bosganda dropdownni ochish/yopish
+    $input.on("click", function (e) {
+      e.stopPropagation();
+      $input.toggleClass("active");
+      $dropdown.slideToggle();
+    });
+
+    // Label tanlanganda inputga qiymat yozish va dropdownni yopish
+    $dropdown.find("label").on("click", function () {
+      const value = $(this).text().trim();
+      $input.val(value);
+      $dropdown.slideUp();
+      $input.removeClass("active");
+    });
+
+    // Tashqariga bosilganda yopish
+    $(document).on("click", function () {
+      $dropdown.slideUp();
+      $input.removeClass("active");
+    });
+  }
+  Selects2();
+
+  function initDatePickers(
+    checkinSelector = "#checkin",
+    checkoutSelector = "#checkout"
+  ) {
+    const checkin = flatpickr(checkinSelector, {
+      locale: "ru",
+      dateFormat: "Y-m-d",
+      minDate: "today",
+      onChange: function (selectedDates, dateStr, instance) {
+        if (selectedDates.length > 0) {
+          checkout.set("minDate", dateStr);
+        }
+      },
+    });
+
+    const checkout = flatpickr(checkoutSelector, {
+      locale: "ru",
+      dateFormat: "Y-m-d",
+      minDate: "today",
+    });
+
+    return { checkin, checkout }; // kerak bo‘lsa tashqaridan ularga murojaat qilish uchun
+  }
+  initDatePickers();
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".testimonialSwiper", {
