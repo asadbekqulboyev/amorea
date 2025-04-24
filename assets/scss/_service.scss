@@ -25,6 +25,11 @@
       border-bottom: 1px dashed #374955;
       text-decoration: none;
       font-weight: 600;
+      transition: all 0.2s linear;
+      &:hover {
+        color: #e07b39;
+        border-color: #e07b39;
+      }
       @media (max-width: 768px) {
         font-size: 16px;
       }

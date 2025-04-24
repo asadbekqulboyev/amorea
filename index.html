@@ -248,34 +248,58 @@
         <div class="container">
           <div class="start">
             <form id="bookingForm">
-              <select name="tourType1" id="tourChoosing1">
-                <option value="" selected disabled data-placeholder="true">
-                  Выбрать тур
-                </option>
-                <option value="1">Название тура 1</option>
-                <option value="2">Название тура 2</option>
-                <option value="3">Название тура 3</option>
-                <option value="4">Название тура 4</option>
-                <option value="5">Название тура 5</option>
-                <option value="6">Название тура 6</option>
-              </select>
-
-              <select
-                name="tourType2"
-                id="tourChoosing2"
-                data-bs-target="#kt_modal_1"
-              >
-                <option value="" selected disabled data-placeholder="true">
-                  Выбрать тур
-                </option>
-                <option value="1">Название тура 1</option>
-                <option value="2">Название тура 2</option>
-                <option value="3">Название тура 3</option>
-                <option value="4">Название тура 4</option>
-                <option value="5">Название тура 5</option>
-                <option value="6">Название тура 6</option>
-              </select>
-
+              <div class="dropdown-container">
+                <input
+                  type="text"
+                  id="tourChoosing1"
+                  name="selectedAreas"
+                  placeholder="Район Бали"
+                  readonly
+                />
+                <div class="dropdown-list">
+                  <label
+                    ><input type="checkbox" hidden value="Нуса-Дуа" />
+                    Нуса-Дуа</label
+                  >
+                  <label
+                    ><input type="checkbox" hidden value="Семиньяк" />
+                    Семиньяк</label
+                  >
+                  <label
+                    ><input type="checkbox" hidden value="Чангу" /> Чангу</label
+                  >
+                  <label
+                    ><input type="checkbox" hidden value="Джимбаран" />
+                    Джимбаран</label
+                  >
+                  <label
+                    ><input type="checkbox" hidden value="Семиньяк" />
+                    Семиньяк</label
+                  >
+                  <label
+                    ><input type="checkbox" hidden value="Чангу" /> Чангу</label
+                  >
+                  <label
+                    ><input type="checkbox" hidden value="Джимбаран" />
+                    Джимбаран</label
+                  >
+                </div>
+              </div>
+              <div class="dropdown-container">
+                <input
+                  type="text"
+                  id="tourChoosing2"
+                  name="home"
+                  placeholder="Количество комнат"
+                  readonly
+                />
+                <div class="dropdown-list">
+                  <label> 1 комнаты </label>
+                  <label> 2 комнаты </label>
+                  <label> 3 комнаты </label>
+                  <label> 4 комнаты </label>
+                </div>
+              </div>
               <div class="date-picker-container">
                 <input
                   type="text"
@@ -830,10 +854,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ru.js"></script>
-    <!-- Swiper JS (ESM versiyasi) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <!-- nice-select -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
 

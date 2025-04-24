@@ -39,7 +39,9 @@
       padding: 16px;
     }
 
-    select {
+    select,
+    #tourChoosing1,
+    #tourChoosing2 {
       display: flex;
       padding: 12px 16px;
       justify-content: space-between;
@@ -65,7 +67,61 @@
         padding: 9px 16px;
       }
     }
+    .dropdown-container {
+      position: relative;
+      #tourChoosing1,
+      #tourChoosing2 {
+        padding-right: 32px;
+      }
+      .dropdown-list {
+        display: none;
+        position: absolute;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: #fff;
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+        input:checked + label {
+          background: #000;
+        }
+        &::-webkit-scrollbar {
+          width: 3px;
+          border-radius: 4px;
+          background: #ebebeb;
+          position: relative;
+          right: 10px;
+          height: 90%;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background: #b6a28e;
+          cursor: pointer;
+        }
+      }
 
+      .dropdown-list label {
+        margin-top: 8px;
+        display: block;
+        padding: 4px 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        border-radius: 4px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .dropdown-list label:hover {
+        background-color: #f0f0f0;
+      }
+    }
     .date-picker-container {
       position: relative;
       display: flex;
@@ -104,7 +160,6 @@
           font-size: 16px;
         }
       }
-     
 
       img {
         position: absolute;

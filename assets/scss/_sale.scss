@@ -249,6 +249,12 @@
       a {
         border-bottom: 1px dashed #374955;
         width: fit-content;
+        transition: all 0.2s linear;
+        &:hover {
+          border-color: #e07b39;
+          color: #e07b39;
+        }
+
         @media (max-width: 1024px) {
           margin-top: 16px;
         }

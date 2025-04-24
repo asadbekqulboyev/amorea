@@ -1,13 +1,197 @@
-.catalog{
-    .form{
-        margin-top: 40px;
-        .start{
-            transform: translateY(0);
-            form{
-                box-shadow: none;
-                border-radius: 0;
-                padding: 0;
-            }
-        }
+.catalog {
+  .form {
+    margin-top: 40px;
+    .start {
+      transform: translateY(0);
+      form {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+      }
     }
+    .exit_btn {
+      background: transparent;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -30px;
+      margin: auto;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span {
+        color: #374955;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        border-bottom: 1px dashed #374955;
+      }
+    }
+  }
+  .discounted__feltr--left {
+    .current {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+      color: #374955;
+    }
+    .nice-select {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      color: #374955;
+      font-size: 16px;
+      font-weight: 400;
+      outline: none;
+      cursor: pointer;
+      height: fit-content;
+      &:after {
+        right: -12px;
+        border-color: #374955;
+      }
+      .list {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: #fff;
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+        li {
+          height: auto;
+          border-radius: 4px;
+          min-height: 30px;
+          padding: 8px;
+          height: fit-content;
+          line-height: normal;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          color: #374955;
+          &.selected {
+            color: #fff;
+            background: #b6a28e !important;
+          }
+        }
+      }
+    }
+  }
+  .price_dropdown {
+    position: relative;
+    font-family: Arial, sans-serif;
+    .price_toggle {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+      color: #374955;
+      img {
+        transition: all 0.2s linear;
+      }
+      &.active {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .price_popup {
+      background: #fff;
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: #fff;
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      right: 0;
+      width: 172px;
+      z-index: 11;
+      display: none;
+    }
+
+    .price_inputs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 4px;
+      border: 1px solid #b6a28e;
+      border-radius: 6px;
+    }
+    .irs--round {
+      height: fit-content;
+    }
+    .irs-handle {
+      width: 8px;
+      height: 8px;
+      background: #d97706;
+      top: 7.5px;
+      cursor: pointer;
+    }
+    .irs--round .irs-line {
+      height: 3px;
+      top: 10px;
+      margin-bottom: 12px;
+    }
+    .irs-min,
+    .irs-max {
+      display: none;
+    }
+    .irs-bar {
+      height: 3px;
+    }
+    .price_input {
+      text-align: center;
+      flex: 1;
+    }
+
+    .price_input .label {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      color: #b6a28e;
+      text-align: left;
+    }
+
+    .price_input .value {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: #374955;
+      text-align: left;
+    }
+
+    .divider {
+      width: 1px;
+      height: 40px;
+      background: #d6bfa6;
+      margin: 0 5px;
+    }
+    .irs-from,
+    .irs-to,
+    .irs-single {
+      display: none;
+    }
+
+    /* ion.rangeSlider skin override */
+    .irs--round .irs-bar {
+      background: #d97706;
+      top: 10px;
+    }
+    .irs--round .irs-from,
+    .irs--round .irs-to,
+    .irs--round .irs-single {
+      background: #d97706;
+    }
+    .irs--round .irs-handle {
+      border-color: #d97706;
+    }
+  }
 }

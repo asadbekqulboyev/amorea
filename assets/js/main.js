@@ -287,6 +287,125 @@ $(document).ready(function () {
       initMobileSwiper();
     });
   });
+  if ($("#sort_select").length) {
+    $("#sort_select").niceSelect();
+  }
+  function initNiceSelectDropdown() {
+    // niceSelect ni ishga tushiramiz
+    $("select").niceSelect();
+
+    // Select ochilganda boshqalarni yopish
+    $(document).on("click", ".nice-select", function (e) {
+      // Bosilgan select tashqarisidagi barcha selectlarni yopamiz
+      $(".nice-select").not(this).removeClass("open");
+      e.stopPropagation(); // document clickga o'tmasin
+    });
+
+    // Document bo'yicha bosilsa, barcha ochilgan selectni yopamiz
+    $(document).on("click", function () {
+      $(".nice-select").removeClass("open");
+    });
+  }
+
+  if ($("#price_range").length) {
+    $("#price_range").ionRangeSlider({
+      type: "double",
+      min: 1000,
+      max: 100000,
+      from: 1000,
+      to: 100000,
+      step: 1000,
+      postfix: " ₽",
+      skin: "round",
+      onStart: updateDisplay,
+      onChange: updateDisplay,
+    });
+
+    function formatNumber(n) {
+      return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+
+    function updateDisplay(data) {
+      $("#price_from").text(formatNumber(data.from) + " ₽");
+      $("#price_to").text(formatNumber(data.to) + " ₽");
+    }
+    function initPriceDropdown() {
+      $(".price_toggle").click(function (e) {
+        $(this).toggleClass("active");
+        e.stopPropagation(); // toggle bosilganda document.click ishga tushmasin
+
+        const parent = $(this).closest(".price_dropdown");
+
+        // Boshqa popuplarni yopamiz
+        $(".price_dropdown .price_popup")
+          .not(parent.find(".price_popup"))
+          .slideUp(150);
+
+        // Shu popupni ochamiz/yopamiz
+        parent.find(".price_popup").slideToggle(150);
+      });
+
+      // Tashqariga bosilganda barcha popuplarni yopish
+      $(document).click(function () {
+        $(".price_popup").slideUp(150);
+      });
+
+      // Popup ichiga bosilganda yopilmasin
+      $(".price_popup").click(function (e) {
+        e.stopPropagation();
+      });
+    }
+
+    initPriceDropdown();
+    $("#tourChoosing1").niceSelect();
+
+    $("#tourChoosing1").on("change", function () {
+      const selected = $(this).val();
+      $("#selectedRegion").text(selected);
+    });
+  }
+
+  function initDropdown(containerSelector) {
+    const $container = $(containerSelector);
+    const $input = $container.find('input[type="text"]#tourChoosing1');
+    const $list = $container.find("#tourChoosing1~.dropdown-list");
+
+    // Dropdown ochilishi
+    $input.on("click", function () {
+      $list.slideToggle();
+    });
+
+    // Checkbox tanlanganda inputni yangilash
+    $list.find('input[type="checkbox"]').on("change", function () {
+      const selected = $list
+        .find('input[type="checkbox"]:checked')
+        .map(function () {
+          return $(this).val();
+        })
+        .get()
+        .join(", ");
+      $input.val(selected);
+    });
+
+    // Tashqariga bosilganda dropdownni yopish
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(containerSelector).length) {
+        $list.hide();
+      }
+    });
+  }
+
+  initDropdown(".dropdown-container");
+  $("#tourChoosing2").click(function () {
+    $(this).toggleClass("active");
+    $(this).next(".dropdown-list").slideToggle();
+    $(this)
+      .next(".dropdown-list label")
+      .click(function () {
+        $("#tourChoosing2").val($(this).next(".dropdown-list label").text());
+        $("#tourChoosing2").text($(this).next(".dropdown-list label").text());
+      });
+  });
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".testimonialSwiper", {

@@ -20,7 +20,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/css/ion.rangeSlider.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link
       rel="stylesheet"
@@ -269,7 +272,6 @@
                   />
                   <img src="assets/imges/form_imput_img.svg" alt="" />
                 </div>
-
                 <div class="date-picker-container">
                   <input
                     type="text"
@@ -280,6 +282,10 @@
                   <img src="assets/imges/form_imput_img.svg" alt="" />
                 </div>
                 <button class="button-form">Продолжить</button>
+                <button type="reset" class="exit_btn">
+                  <img src="assets/imges/reset_icon.svg" alt="" />
+                  <span>Очистить фильтр</span>
+                </button>
               </form>
             </div>
           </div>
@@ -289,20 +295,39 @@
           <div class="container">
             <div class="discounted__feltr">
               <div class="discounted__feltr--left">
-                <select>
-                  <option>Выше рейтинг</option>
-                  <option>Дешевле</option>
-                  <option>Дороже</option>
-                  <option>Новинки</option>
-                  <option>Выгодные</option>
+                <select id="sort_select">
+                  <option value="popular" selected>По популярности</option>
+                  <option value="rating">Выше рейтинг</option>
+                  <option value="cheap" >Дешевле</option>
+                  <option value="expensive">Дороже</option>
+                  <option value="new">Новинки</option>
+                  <option value="best">Выгодные</option>
                 </select>
-                <select>
-                  <option>Цена</option>
-                  <option>Цена</option>
-                  <option>Цена</option>
-                  <option>Цена</option>
-                  <option>Цена</option>
-                </select>
+                
+                <div class="price_dropdown">
+                  <div class="price_toggle">Цена <span><img src="assets/imges/str.svg" alt=""></span></div>
+
+                  <div class="price_popup">
+                    <div class="price_inputs">
+                      <div class="price_input">
+                        <div class="label">От</div>
+                        <div class="value" id="price_from">1 000 ₽</div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="price_input">
+                        <div class="label">До</div>
+                        <div class="value" id="price_to">100 000 ₽</div>
+                      </div>
+                    </div>
+
+                    <input
+                      type="text"
+                      id="price_range"
+                      name="price_range"
+                      value=""
+                    />
+                  </div>
+                </div>
               </div>
               <div class="discounted__feltr--right">
                 Найдено апартаментов: 2 460
@@ -1547,20 +1572,14 @@
       </div>
     </div>
 
-    <!-- jQuery kutubxonasi -->
+    <!-- js -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Swiper JS (ESM versiyasi) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-
-    <!-- nice-select -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-
-    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
