@@ -92,6 +92,7 @@
     height: auto;
     position: relative;
     display: grid;
+
     @media #{$smallLaptop} {
       order: 1;
       width: 100%;
@@ -100,7 +101,6 @@
 
   .swiper {
     max-width: 596px;
-    max-height: 378px;
     position: relative;
     margin: 0 auto;
     @media #{$smallLaptop} {
@@ -135,10 +135,8 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: 0.3s all ease;
     width: 266px;
-    height: 292px;
     @media (max-width: 768px) {
       width: 100%;
-      height: auto;
     }
   }
 
@@ -156,6 +154,9 @@
       opacity: 0;
     }
   }
+  .swiper-pagination {
+    margin-bottom: -5px;
+  }
 }
 .testimonialSwiper {
   position: relative;
@@ -168,6 +169,7 @@
   left: 50% !important;
   transform: translateX(-50%);
   z-index: 10;
+  margin-top: 40px;
 }
 
 .swiper-pagination-bullet {

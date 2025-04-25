@@ -20,7 +20,7 @@ $(document).ready(function () {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    initialSlide: 2,
+    initialSlide: 3,
     speed: 600,
     preventClicks: true,
     coverflowEffect: {
@@ -236,28 +236,66 @@ $(document).ready(function () {
       });
 
       // "first" tugmasiga bosilganda sana mavjudligini tekshirish
-      $(".first").click(function (e) {
-        const pickerValue = $("#datepicker").val();
-        if (pickerValue && pickerValue.length > 0) {
-          $(this).parents(".modal_content").next().fadeIn();
-          $(this).parents(".modal_content").fadeOut(0);
-          e.preventDefault();
-        } else {
-          $("#datepicker").focus(); // Inputga fokus qilish
-        }
-        if (
-          $("#contactInput").val().length > 0 &&
-          $("#firstname").val().length > 0
-        ) {
-          $(this).parents(".modal_content").next().fadeIn();
-          $(this).parents(".modal_content").fadeOut(0);
-          setTimeout(() => {
-            $(".modal");
-          }, 7000);
-        }
-      });
+      // $(".first").click(function (e) {
+      //   const pickerValue = $("#datepicker").val();
+      //   if (pickerValue && pickerValue.length > 0) {
+      //     $(this).parents(".modal_content").next().fadeIn();
+      //     $(this).parents(".modal_content").fadeOut(0);
+      //     e.preventDefault();
+      //   } else {
+      //     $("#datepicker").focus(); // Inputga fokus qilish
+      //   }
+      //   if (
+      //     $("#contactInput").val().length > 0 &&
+      //     $("#firstname").val().length > 0
+      //   ) {
+      //     $(this).parents(".modal_content").next().fadeIn();
+      //     $(this).parents(".modal_content").fadeOut(0);
+      //     setTimeout(() => {
+      //       $(".modal").fadeOut(); // yoki .hide() bo'lishi mumkin
+      //     }, 7000);
+      //   }
+      // });
     }
   });
+  $(".button.first").click(function (e) {
+    const pickerValue = $("#datepicker").val(); // #datepicker inputining qiymati
+    const contactValue = $("#contactInput").val(); // #contactInput inputining qiymati
+
+    const $currentModal = $(this).parents(".modal_content"); // Hozirgi modal
+    const $nextModal = $currentModal.next(".modal_content"); // Keyingi modal
+
+    // Birinchi modal uchun tekshiruv (datepicker)
+    if ($currentModal.index() === 0 && pickerValue.length > 10) {
+      // Agar #datepicker qiymati 10dan ortiq bo'lsa
+      $currentModal.fadeOut(0); // Oldingi modalni yashirish
+      $nextModal.fadeIn(); // Keyingi modalni ko'rsatish
+    }
+    // Ikkinchi modal uchun tekshiruv (contactInput)
+    else if ($currentModal.index() === 1 && contactValue.length > 0) {
+      // Agar #contactInput to'ldirilgan bo'lsa
+      $currentModal.fadeOut(0); // Oldingi modalni yashirish
+      $nextModal.fadeIn(); // Keyingi modalni ko'rsatish
+
+      // Agar bu oxirgi modal_content bo‘lsa (keyingisi bo‘lmasa)
+      if ($nextModal.length === 0 || $nextModal.hasClass("thanks_modal")) {
+        // 7 soniyadan keyin modalni yopish va "Thanks" oynasini ko'rsatish
+        setTimeout(() => {
+          $(".modal").fadeOut(); // Modalni
+        }, 2000); // 7 soniya kutish
+      }
+    } else {
+      // Agar inputlar bo'sh bo'lsa, kerakli inputga fokus qilish
+      if ($currentModal.index() === 0 && !pickerValue) {
+        $("#datepicker").focus();
+      } else if ($currentModal.index() === 1 && !contactValue) {
+        $("#contactInput").focus();
+      }
+    }
+
+    e.preventDefault(); // Formani yuborishni to‘xtatish
+  });
+
   let swiperInstance = null;
 
   function initMobileSwiper() {
