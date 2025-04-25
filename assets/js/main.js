@@ -405,36 +405,43 @@ $(document).ready(function () {
   }
 
   function initDropdown(containerSelector) {
-    const $container = $(containerSelector);
-    const $input = $container.find('input[type="text"]#tourChoosing1');
-    const $list = $container.find("#tourChoosing1~.dropdown-list");
+    $(containerSelector).each(function () {
+      const $thisContainer = $(this);
+      const $input = $thisContainer.find('input[type="text"]#tourChoosing1');
+      const $list = $thisContainer.find("#tourChoosing1~.dropdown-list");
 
-    // Dropdown ochilishi
-    $input.on("click", function () {
-      $list.slideToggle();
-    });
+      // Dropdown ochilishi
+      $input.on("click", function () {
+        $list.slideToggle();
+      });
 
-    // Checkbox tanlanganda inputni yangilash
-    $list.find('input[type="checkbox"]').on("change", function () {
-      const selected = $list
-        .find('input[type="checkbox"]:checked')
-        .map(function () {
-          return $(this).val();
-        })
-        .get()
-        .join(", ");
-      $input.val(selected);
-    });
+      // Checkbox tanlanganda inputni yangilash
+      $list.find('input[type="checkbox"]').on("change", function () {
+        const selected = $list
+          .find('input[type="checkbox"]:checked')
+          .map(function () {
+            return $(this).val();
+          })
+          .get()
+          .join(", ");
+        $input.val(selected);
+      });
 
-    // Tashqariga bosilganda dropdownni yopish
-    $(document).on("click", function (e) {
-      if (!$(e.target).closest(containerSelector).length) {
-        $list.hide();
-      }
+      // Tashqariga bosilganda dropdownni yopish
     });
   }
 
   initDropdown(".dropdown-container");
+
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".dropdown-container#first").length) {
+      $(".dropdown-container#first .dropdown-list").slideUp();
+    }
+    if (!$(e.target).closest(".dropdown-container#last").length) {
+      $(".dropdown-container#last .dropdown-list").slideUp();
+    }
+  });
+
   function Selects2() {
     const $input = $("#tourChoosing2");
     const $dropdown = $input.next(".dropdown-list");
@@ -450,12 +457,6 @@ $(document).ready(function () {
     $dropdown.find("label").on("click", function () {
       const value = $(this).text().trim();
       $input.val(value);
-      $dropdown.slideUp();
-      $input.removeClass("active");
-    });
-
-    // Tashqariga bosilganda yopish
-    $(document).on("click", function () {
       $dropdown.slideUp();
       $input.removeClass("active");
     });
