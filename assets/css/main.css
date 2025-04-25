@@ -3792,6 +3792,16 @@ footer .footer__contak li a:hover {
   border-color: #d97706;
 }
 
+.catalog .dropdown-container {
+  width: 100%;
+}
+.catalog .dropdown-container .nice-select {
+  width: 100%;
+}
+.catalog .dropdown-container input#tourChoosing1,
+.catalog .dropdown-container input#tourChoosing2 {
+  width: 100%;
+}
 .catalog .discounted {
   margin-top: 40px;
 }
@@ -3837,6 +3847,10 @@ footer .footer__contak li a:hover {
 }
 .catalog .discounted__pagination label input:checked ~ span {
   color: #e07b39;
+}
+.catalog .form {
+  position: relative;
+  z-index: 12;
 }
 
 .catalog_page .discounted {

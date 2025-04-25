@@ -357,7 +357,7 @@ $(document).ready(function () {
     }
 
     initPriceDropdown();
-    $("#tourChoosing1").niceSelect();
+    // $("#tourChoosing1").niceSelect();
 
     $("#tourChoosing1").on("change", function () {
       const selected = $(this).val();

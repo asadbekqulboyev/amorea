@@ -1,4 +1,14 @@
 .catalog {
+  .dropdown-container {
+    width: 100%;
+    .nice-select {
+      width: 100%;
+    }
+    input#tourChoosing1,
+    input#tourChoosing2 {
+      width: 100%;
+    }
+  }
   .discounted {
     margin-top: 40px;
     &__pagination {
@@ -47,6 +57,10 @@
         }
       }
     }
+  }
+  .form {
+    position: relative;
+    z-index: 12;
   }
 }
 .catalog_page {
