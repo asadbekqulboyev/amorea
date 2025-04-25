@@ -357,8 +357,6 @@ $(document).ready(function () {
     }
 
     initPriceDropdown();
-    // $("#tourChoosing1").niceSelect();
-
     $("#tourChoosing1").on("change", function () {
       const selected = $(this).val();
       $("#selectedRegion").text(selected);
@@ -426,8 +424,7 @@ $(document).ready(function () {
   function initDatePickers(
     checkinSelector = "#checkin",
     checkoutSelector = "#checkout"
-  ) 
-  {
+  ) {
     const checkin = flatpickr(checkinSelector, {
       locale: "ru",
       dateFormat: "Y-m-d",

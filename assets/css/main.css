@@ -1294,6 +1294,11 @@ a {
 .form form .dropdown-container {
   position: relative;
 }
+@media (max-width: 1024px) {
+  .form form .dropdown-container {
+    width: 100%;
+  }
+}
 .form form .dropdown-container #tourChoosing1,
 .form form .dropdown-container #tourChoosing2 {
   padding-right: 32px;

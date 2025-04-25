@@ -114,6 +114,9 @@
     }
     .dropdown-container {
       position: relative;
+      @media #{$bigTab} {
+        width: 100%;
+      }
       #tourChoosing1,
       #tourChoosing2 {
         padding-right: 32px;
