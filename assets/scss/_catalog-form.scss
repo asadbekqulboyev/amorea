@@ -195,3 +195,19 @@
     }
   }
 }
+.flatpickr-rContainer {
+  @media (max-width: 768px) {
+    width: 100% !important;
+  }
+  .flatpickr-days {
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
+  }
+  .dayContainer {
+    @media (max-width: 768px) {
+      max-width: 100% !important;
+      width: 100%;
+    }
+  }
+}

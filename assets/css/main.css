@@ -3801,6 +3801,23 @@ footer .footer__contak li a:hover {
   border-color: #d97706;
 }
 
+@media (max-width: 768px) {
+  .flatpickr-rContainer {
+    width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .flatpickr-rContainer .flatpickr-days {
+    width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .flatpickr-rContainer .dayContainer {
+    max-width: 100% !important;
+    width: 100%;
+  }
+}
+
 .catalog .dropdown-container {
   width: 100%;
 }
