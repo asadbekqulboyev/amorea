@@ -3813,8 +3813,12 @@ footer .footer__contak li a:hover {
 }
 @media (max-width: 768px) {
   .flatpickr-rContainer .dayContainer {
+    padding: 0 5px;
     max-width: 100% !important;
     width: 100%;
+  }
+  .flatpickr-rContainer .dayContainer .flatpickr-day {
+    font-size: 14px !important;
   }
 }
 

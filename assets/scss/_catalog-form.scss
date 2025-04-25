@@ -206,8 +206,12 @@
   }
   .dayContainer {
     @media (max-width: 768px) {
+      padding: 0 5px;
       max-width: 100% !important;
       width: 100%;
+      .flatpickr-day {
+        font-size: 14px !important;
+      }
     }
   }
 }
