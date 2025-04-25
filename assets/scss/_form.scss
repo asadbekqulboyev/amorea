@@ -114,6 +114,9 @@
     }
     .dropdown-container {
       position: relative;
+      input {
+        cursor: pointer;
+      }
       @media #{$bigTab} {
         width: 100%;
       }

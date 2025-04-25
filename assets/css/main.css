@@ -1294,6 +1294,9 @@ a {
 .form form .dropdown-container {
   position: relative;
 }
+.form form .dropdown-container input {
+  cursor: pointer;
+}
 @media (max-width: 1024px) {
   .form form .dropdown-container {
     width: 100%;

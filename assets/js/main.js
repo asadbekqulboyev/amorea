@@ -251,6 +251,9 @@ $(document).ready(function () {
         ) {
           $(this).parents(".modal_content").next().fadeIn();
           $(this).parents(".modal_content").fadeOut(0);
+          setTimeout(() => {
+            $(".modal");
+          }, 7000);
         }
       });
     }
@@ -425,6 +428,14 @@ $(document).ready(function () {
     checkinSelector = "#checkin",
     checkoutSelector = "#checkout"
   ) {
+    // Input elementlarini olish
+    const checkinInput = document.querySelector(checkinSelector);
+    const checkoutInput = document.querySelector(checkoutSelector);
+
+    // iOS/Safari muammosini hal qilish uchun type ni "text" ga o'zgartirish
+    if (checkinInput) checkinInput.setAttribute("type", "text");
+    if (checkoutInput) checkoutInput.setAttribute("type", "text");
+
     const checkin = flatpickr(checkinSelector, {
       locale: "ru",
       dateFormat: "Y-m-d",
@@ -442,8 +453,9 @@ $(document).ready(function () {
       minDate: "today",
     });
 
-    return { checkin, checkout }; // kerak bo‘lsa tashqaridan ularga murojaat qilish uchun
+    return { checkin, checkout };
   }
+
   initDatePickers();
 });
 document.addEventListener("DOMContentLoaded", function () {
