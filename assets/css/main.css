@@ -137,6 +137,24 @@ a {
   background-color: #d27233;
 }
 
+#checkin,
+#checkout {
+  cursor: pointer;
+  outline: none;
+}
+
+.air-datepicker-body--day-name {
+  color: #374955;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: capitalize;
+}
+.air-datepicker-body--day-name::after {
+  content: ".";
+}
+
 .hero {
   background-image: url(../imges/hedr_bg_img.png);
   background-repeat: no-repeat;

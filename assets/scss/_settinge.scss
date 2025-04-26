@@ -121,3 +121,20 @@ a {
     background-color: #d27233;
   }
 }
+
+#checkin,
+#checkout {
+  cursor: pointer;
+  outline: none;
+}
+.air-datepicker-body--day-name {
+  color: #374955;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: capitalize;
+  &::after {
+    content: ".";
+  }
+}

@@ -467,29 +467,38 @@ $(document).ready(function () {
     checkinSelector = "#checkin",
     checkoutSelector = "#checkout"
   ) {
-    // Input elementlarini olish
-    const checkinInput = document.querySelector(checkinSelector);
-    const checkoutInput = document.querySelector(checkoutSelector);
+    const checkinInput = $(checkinSelector)[0];
+    const checkoutInput = $(checkoutSelector)[0];
 
-    // iOS/Safari muammosini hal qilish uchun type ni "text" ga o'zgartirish
-    if (checkinInput) checkinInput.setAttribute("type", "text");
-    if (checkoutInput) checkoutInput.setAttribute("type", "text");
+    // Sana formatini to'g'ri sozlash
+    const today = new Date().toISOString().split("T")[0];
 
-    const checkin = flatpickr(checkinSelector, {
-      locale: "ru",
-      dateFormat: "Y-m-d",
-      minDate: "today",
-      onChange: function (selectedDates, dateStr, instance) {
-        if (selectedDates.length > 0) {
-          checkout.set("minDate", dateStr);
+    const checkin = new AirDatepicker(checkinInput, {
+      minDate: today,
+      onSelect({ date }) {
+        if (date) {
+          // checkin sana tanlanganidan so'ng checkoutning minDate ni yangilash
+          checkout.update({ minDate: date });
+
+          // tanlangan sana uchun maxsus klass qo'shish
+          $(checkoutInput).addClass("active-datepicker");
+
+          // Checkout datepickerni fokus qilish va ochish
+          checkout.show();
+          $(checkoutInput).focus();
+
+          // Tanlangan sanadan keyin checkin kalendari yopilishi
+          checkin.hide();
         }
       },
     });
 
-    const checkout = flatpickr(checkoutSelector, {
-      locale: "ru",
-      dateFormat: "Y-m-d",
-      minDate: "today",
+    const checkout = new AirDatepicker(checkoutInput, {
+      minDate: today,
+      onSelect() {
+        // Checkout kalendari tanlanganidan so'ng u yopiladi
+        checkout.hide();
+      },
     });
 
     return { checkin, checkout };
