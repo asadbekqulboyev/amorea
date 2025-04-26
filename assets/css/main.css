@@ -1370,9 +1370,6 @@ a {
   background: #fff;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 }
-.form form .dropdown-container .dropdown-list input:checked + label {
-  background: #000;
-}
 .form form .dropdown-container .dropdown-list::-webkit-scrollbar {
   width: 3px;
   border-radius: 4px;
@@ -1403,6 +1400,9 @@ a {
 }
 .form form .dropdown-container .dropdown-list label:hover {
   background-color: #f0f0f0;
+}
+.form form .dropdown-container .dropdown-list label.active {
+  background-color: #b6a28e;
 }
 .form form .button-form {
   border-radius: 4px;

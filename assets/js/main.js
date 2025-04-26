@@ -441,7 +441,13 @@ $(document).ready(function () {
       $(".dropdown-container#last .dropdown-list").slideUp();
     }
   });
-
+  $(".dropdown-list label input").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(this).parent("label").addClass("active");
+    } else {
+      $(this).parent("label").removeClass("active");
+    }
+  });
   function Selects2() {
     const $input = $("#tourChoosing2");
     const $dropdown = $input.next(".dropdown-list");

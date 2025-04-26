@@ -136,9 +136,7 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         background: #fff;
         box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
-        input:checked + label {
-          background: #000;
-        }
+
         &::-webkit-scrollbar {
           width: 3px;
           border-radius: 4px;
@@ -172,6 +170,9 @@
 
       .dropdown-list label:hover {
         background-color: #f0f0f0;
+      }
+      .dropdown-list label.active {
+        background-color: #b6a28e;
       }
     }
 
