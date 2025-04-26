@@ -155,6 +155,39 @@ a {
   content: ".";
 }
 
+.air-datepicker-nav--title {
+  color: #374955;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+.air-datepicker-nav--title i {
+  color: #374955;
+}
+
+.-selected-.air-datepicker-cell.-day- {
+  background: #e07b39;
+  color: #fff;
+  cursor: pointer;
+}
+
+.air-datepicker-cell.-day- {
+  color: #374955;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.air-datepicker-cell.-day-:hover {
+  background: rgba(224, 123, 57, 0.15);
+  color: #374955;
+}
+
+.air-datepicker-cell.-day- {
+  cursor: pointer;
+}
+
 .hero {
   background-image: url(../imges/hedr_bg_img.png);
   background-repeat: no-repeat;
