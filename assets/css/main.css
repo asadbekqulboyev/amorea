@@ -2513,58 +2513,6 @@ footer .footer__contak li a:hover {
 .modal input:not([type=radio]):not([type=checkbox]):not(.cur-year).error {
   border-color: #e03939;
 }
-.modal .radio_slect {
-  display: flex;
-  align-items: center;
-  gap: 0 24px;
-  margin: 24px 0 8px;
-}
-.modal .radio_slect .custom_radio {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-.modal .radio_slect .custom_radio .msg_title {
-  color: #374955;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  border-bottom: 1px dashed #374955;
-}
-.modal .radio_slect .custom_radio input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-.modal .radio_slect .radio_mark {
-  position: relative;
-  top: 2px;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #e07b39;
-  transition: 0.2s;
-}
-.modal .radio_slect .radio_mark::after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.modal .radio_slect .custom_radio input:checked ~ .radio_mark::after {
-  display: block;
-}
-.modal .radio_slect .radio_mark::after {
-  top: 3.6px;
-  left: 3.6px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #e07b39;
-}
 .modal .check_form {
   display: flex;
   align-items: center;
@@ -2688,6 +2636,59 @@ footer .footer__contak li a:hover {
 }
 .modal .flatpickr-calendar {
   position: static;
+}
+
+.radio_slect {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  margin: 24px 0 8px;
+}
+.radio_slect .custom_radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.radio_slect .custom_radio .msg_title {
+  color: #374955;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  border-bottom: 1px dashed #374955;
+}
+.radio_slect .custom_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.radio_slect .radio_mark {
+  position: relative;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #e07b39;
+  transition: 0.2s;
+}
+.radio_slect .radio_mark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio_slect .custom_radio input:checked ~ .radio_mark::after {
+  display: block;
+}
+.radio_slect .radio_mark::after {
+  top: 3.6px;
+  left: 3.6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e07b39;
 }
 
 .about-hero {
@@ -3510,7 +3511,7 @@ footer .footer__contak li a:hover {
 .about-rent {
   margin-top: 60px;
 }
-@media(max-width: 512px) {
+@media (max-width: 512px) {
   .about-rent {
     margin-top: 40px;
   }
@@ -3521,7 +3522,7 @@ footer .footer__contak li a:hover {
   align-items: start;
   gap: 0 86px;
 }
-@media(max-width: 512px) {
+@media (max-width: 512px) {
   .about-rent__start {
     margin-top: 15px;
   }
@@ -3532,12 +3533,12 @@ footer .footer__contak li a:hover {
   gap: 16px 0;
   max-width: 770px;
 }
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-rent__start--left {
     width: 50%;
   }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .about-rent__start--left {
     width: 100%;
   }
@@ -3547,16 +3548,16 @@ footer .footer__contak li a:hover {
   flex-wrap: wrap;
   gap: 13px 16px;
 }
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-rent__start--left .left-inputs {
-    justify-content: center;
     gap: 16px;
   }
 }
-.about-rent__start--left .left-inputs input, .about-rent__start--left .left-inputs textarea {
+.about-rent__start--left .left-inputs input,
+.about-rent__start--left .left-inputs textarea {
   padding: 12px 16px;
   border-radius: 4px;
-  border: 1px solid #B6A28E;
+  border: 1px solid #b6a28e;
   background-color: rgba(255, 255, 255, 0.8);
   outline: none;
   color: #374955;
@@ -3564,13 +3565,16 @@ footer .footer__contak li a:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
+  width: 100%;
 }
-@media(max-width: 512px) {
-  .about-rent__start--left .left-inputs input, .about-rent__start--left .left-inputs textarea {
+@media (max-width: 512px) {
+  .about-rent__start--left .left-inputs input,
+  .about-rent__start--left .left-inputs textarea {
     padding: 9px 16px;
   }
 }
-.about-rent__start--left .left-inputs input::placeholder, .about-rent__start--left .left-inputs textarea::placeholder {
+.about-rent__start--left .left-inputs input::placeholder,
+.about-rent__start--left .left-inputs textarea::placeholder {
   color: #374955;
   font-size: 16px;
   font-style: normal;
@@ -3578,9 +3582,9 @@ footer .footer__contak li a:hover {
   line-height: 21px;
 }
 .about-rent__start--left .left-inputs input {
-  width: 246px;
+  width: 100%;
 }
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-rent__start--left .left-inputs input {
     width: 100%;
   }
@@ -3588,7 +3592,7 @@ footer .footer__contak li a:hover {
 .about-rent__start--left .left-inputs input:nth-child(n+4) {
   width: 377px;
 }
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-rent__start--left .left-inputs input:nth-child(n+4) {
     width: 100%;
   }
@@ -3643,7 +3647,7 @@ footer .footer__contak li a:hover {
   text-underline-offset: auto;
   text-underline-position: from-font;
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .about-rent__start--right {
     display: none;
   }

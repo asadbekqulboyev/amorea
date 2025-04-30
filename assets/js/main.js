@@ -204,7 +204,7 @@ $(document).ready(function () {
       $(this).fadeOut();
     }
   });
-  $(".order_btn").click(function (e) {
+  $(".order_btn , .item__button").click(function (e) {
     e.preventDefault();
     $(".modal").fadeIn();
     if ($("#datepicker").length) {
@@ -234,28 +234,6 @@ $(document).ready(function () {
         isMobile = window.innerWidth <= 768;
         picker.redraw(); // Agar kerak bo‘lsa, flatpickrni qayta chizish
       });
-
-      // "first" tugmasiga bosilganda sana mavjudligini tekshirish
-      // $(".first").click(function (e) {
-      //   const pickerValue = $("#datepicker").val();
-      //   if (pickerValue && pickerValue.length > 0) {
-      //     $(this).parents(".modal_content").next().fadeIn();
-      //     $(this).parents(".modal_content").fadeOut(0);
-      //     e.preventDefault();
-      //   } else {
-      //     $("#datepicker").focus(); // Inputga fokus qilish
-      //   }
-      //   if (
-      //     $("#contactInput").val().length > 0 &&
-      //     $("#firstname").val().length > 0
-      //   ) {
-      //     $(this).parents(".modal_content").next().fadeIn();
-      //     $(this).parents(".modal_content").fadeOut(0);
-      //     setTimeout(() => {
-      //       $(".modal").fadeOut(); // yoki .hide() bo'lishi mumkin
-      //     }, 7000);
-      //   }
-      // });
     }
   });
   $(".button.first").click(function (e) {
@@ -444,6 +422,7 @@ $(document).ready(function () {
   $(".dropdown-list label input").on("change", function () {
     if ($(this).is(":checked")) {
       $(this).parent("label").addClass("active");
+      $(".dropdown-list").fadeOut();
     } else {
       $(this).parent("label").removeClass("active");
     }
@@ -454,6 +433,7 @@ $(document).ready(function () {
 
     // Inputni bosganda dropdownni ochish/yopish
     $input.on("click", function (e) {
+      $("#tourChoosing1").next(".dropdown-list").slideUp();
       e.stopPropagation();
       $input.toggleClass("active");
       $dropdown.slideToggle();
@@ -511,6 +491,39 @@ $(document).ready(function () {
   }
 
   initDatePickers();
+
+  function updateInputMask() {
+    const selectedMessenger = $('input[name="messengers"]:checked').val();
+    const $input = $("#contact_name");
+
+    $input.val(""); // har gal o'zgartirganda tozalaymiz
+
+    if (selectedMessenger === "telegram") {
+      $input.attr("placeholder", "@имя пользователя");
+      $input.inputmask({
+        mask: "@*{1,20}",
+        definitions: {
+          "*": {
+            validator: "[A-Za-z0-9_]",
+            casing: "lower",
+          },
+        },
+        prefix: "@",
+        rightAlign: false,
+        showMaskOnHover: false,
+        showMaskOnFocus: false,
+      });
+    } else if (selectedMessenger === "whatsapp") {
+      $input.attr("placeholder", "Телефон");
+      $input.inputmask("+7 (999) 999-99-99");
+    }
+  }
+
+  updateInputMask();
+
+  $('input[name="messengers"]').change(function () {
+    updateInputMask();
+  });
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".testimonialSwiper", {

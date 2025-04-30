@@ -79,7 +79,6 @@
       padding: 40px;
       @media (max-width: 768px) {
         padding: 24px 16px;
-        
       }
       .modal_description {
         font-size: 18px;
@@ -122,61 +121,7 @@
       border-color: #e03939;
     }
   }
-  .radio_slect {
-    display: flex;
-    align-items: center;
-    gap: 0 24px;
-    margin: 24px 0 8px;
-    .custom_radio {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      .msg_title {
-        color: #374955;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        border-bottom: 1px dashed #374955;
-      }
-    }
-    .custom_radio input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-    }
 
-    .radio_mark {
-      position: relative;
-      top: 2px;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      background-color: #fff;
-      border-radius: 50%;
-      border: 2px solid #e07b39;
-      transition: 0.2s;
-    }
-    .radio_mark::after {
-      content: "";
-      position: absolute;
-      display: none;
-    }
-
-    .custom_radio input:checked ~ .radio_mark::after {
-      display: block;
-    }
-
-    .radio_mark::after {
-      top: 3.6px;
-      left: 3.6px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: #e07b39;
-    }
-  }
   .check_form {
     display: flex;
     align-items: center;
@@ -299,5 +244,61 @@
   }
   .flatpickr-calendar {
     position: static;
+  }
+}
+
+.radio_slect {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  margin: 24px 0 8px;
+  .custom_radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    .msg_title {
+      color: #374955;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      border-bottom: 1px dashed #374955;
+    }
+  }
+  .custom_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .radio_mark {
+    position: relative;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #e07b39;
+    transition: 0.2s;
+  }
+  .radio_mark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .custom_radio input:checked ~ .radio_mark::after {
+    display: block;
+  }
+
+  .radio_mark::after {
+    top: 3.6px;
+    left: 3.6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #e07b39;
   }
 }

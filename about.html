@@ -4,14 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AMOREA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css"/>
-    <link rel="stylesheet" href="assets/css/main.css?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css?v=3" />
   </head>
 
   <body>
@@ -460,9 +482,7 @@
                   Предоставим подробную консультацию и ответим на все ваши
                   вопросы
                 </p>
-                <a href="https://www.whatsapp.com/" target="_blank"
-                  >Заказать звонок</a
-                >
+                <a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a>
               </div>
             </div>
           </div>
@@ -474,11 +494,34 @@
           <div class="about-rent__start">
             <form class="about-rent__start--left">
               <div class="left-inputs">
-                <input type="text" placeholder="Фамилия" />
+                <!-- <input type="text" placeholder="Фамилия" /> -->
                 <input type="text" placeholder="Имя" />
-                <input type="text" placeholder="Отчество" />
+                <!-- <input type="text" placeholder="Отчество" />
                 <input type="tel" placeholder="Телефон" />
-                <input type="email" placeholder="Почта" />
+                <input type="email" placeholder="Почта" /> -->
+                <div class="radio_slect">
+                  <label class="custom_radio">
+                    <input
+                      type="radio"
+                      name="messengers"
+                      value="telegram"
+                      checked=""
+                    />
+                    <span class="radio_mark"></span>
+                    <span class="msg_title">Telegram</span>
+                  </label>
+                  <label class="custom_radio">
+                    <input type="radio" name="messengers" value="whatsapp" />
+                    <span class="radio_mark"></span>
+                    <span class="msg_title">WhatsApp</span>
+                  </label>
+                </div>
+                <input
+                  type="text"
+                  placeholder="@имя пользователя"
+                  name="contact_name"
+                  id="contact_name"
+                />
                 <textarea placeholder="Описание апартаментов"></textarea>
               </div>
               <div class="left-checked">
@@ -767,6 +810,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="assets/js/main.js?v=2"></script>
   </body>
 </html>

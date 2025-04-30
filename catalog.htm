@@ -4,14 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AMOREA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css"/>
-    <link rel="stylesheet" href="assets/css/main.css?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css?v=3" />
   </head>
 
   <body class="about">
@@ -267,12 +289,21 @@
                   </div>
                 </div>
                 <div class="date-picker-container">
-                  <input type="text" id="checkin" placeholder="Выбрать дату" />
+                  <input
+                    type="text"
+                    id="checkin"
+                    placeholder="Выбрать дату"
+                    readonly
+                  />
                   <img src="assets/imges/form_imput_img.svg" alt="" />
                 </div>
-
                 <div class="date-picker-container">
-                  <input type="text" placeholder="Дата выезда" id="checkout" />
+                  <input
+                    type="text"
+                    placeholder="Дата выезда"
+                    id="checkout"
+                    readonly
+                  />
                   <img src="assets/imges/form_imput_img.svg" alt="" />
                 </div>
                 <button class="button-form">Продолжить</button>
@@ -1307,7 +1338,7 @@
                     вопросы
                   </p>
                   <a href="https://www.whatsapp.com/" target="_blank"
-                    >Заказать звонок</a
+                    >WhatsApp</a
                   >
                 </div>
               </div>
@@ -1567,7 +1598,80 @@
         </div>
       </div>
     </div>
-    
+    <form class="modal">
+      <div class="modal_content">
+        <div class="mdal_form">
+          <input type="text" id="datepicker" />
+          <img src="assets/imges/arrow.svg" alt="" />
+          <span class="input_info">
+            <span class="info_text">
+              Система автоматически отображает доступные даты
+            </span>
+            <img src="assets/imges/input_i.svg" alt="" />
+          </span>
+          <div class="custom_wrapper"></div>
+        </div>
+        <div class="button first">Продолжить</div>
+      </div>
+      <div class="modal_content">
+        <div class="modal_top">
+          <div class="modal_title">Оставить заявку</div>
+          <p class="modal_description">
+            Заполните форму и наш агент свяжется с вами в ближайшее время
+          </p>
+        </div>
+        <div class="modal_form">
+          <label>
+            <input
+              type="text"
+              id="name"
+              name="firstname"
+              placeholder="Имя"
+              id="firstname"
+            />
+          </label>
+          <div class="radio_slect">
+            <label class="custom_radio"
+              ><input type="radio" name="messenger" value="telegram" checked />
+              <span class="radio_mark"></span>
+              <span class="msg_title">Telegram</span></label
+            >
+            <label class="custom_radio">
+              <input type="radio" name="messenger" value="whatsapp" />
+              <span class="radio_mark"></span>
+              <span class="msg_title">WhatsApp</span>
+            </label>
+          </div>
+          <input
+            type="text"
+            placeholder="@имя пользователя"
+            id="contactInput"
+            name="contact"
+          />
+          <label class="check_form">
+            <input type="checkbox" checked required />
+            <span class="checkmark"></span>
+            <span class="modal_description">
+              Я соглашаюсь на обработку моих персональных данных и принимаю
+              <a href="#">политику конфиденциальности</a>
+            </span>
+          </label>
+        </div>
+        <button class="button first">Продолжить</button>
+      </div>
+      <div class="modal_content thanks_modal">
+        <div class="modal_top">
+          <img src="assets/imges/thamks_logo.png" alt="" />
+        </div>
+        <div class="modal_form">
+          <h2 class="form_title">Спасибо</h2>
+          <p class="modal_description">
+            Ваше бронирование успешно оформлено Мы свяжемся с вами ближайшее
+            время.
+          </p>
+        </div>
+      </div>
+    </form>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ru.js"></script>
@@ -1575,7 +1679,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="assets/js/main.js?v=2"></script>
-
   </body>
 </html>
